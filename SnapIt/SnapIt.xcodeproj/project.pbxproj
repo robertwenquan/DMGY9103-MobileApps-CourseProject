@@ -14,6 +14,7 @@
 		490DE46D1ADC200400D5F8CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490DE46C1ADC200400D5F8CA /* Images.xcassets */; };
 		490DE4701ADC200400D5F8CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490DE46E1ADC200400D5F8CA /* LaunchScreen.xib */; };
 		490DE47C1ADC200400D5F8CA /* SnapItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 490DE47B1ADC200400D5F8CA /* SnapItTests.m */; };
+		490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490DE4851ADC246700D5F8CA /* screen-welcome.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		490DE4751ADC200400D5F8CA /* SnapItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490DE47A1ADC200400D5F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		490DE47B1ADC200400D5F8CA /* SnapItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapItTests.m; sourceTree = "<group>"; };
+		490DE4851ADC246700D5F8CA /* screen-welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-welcome.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				490DE4601ADC200400D5F8CA /* Info.plist */,
 				490DE4611ADC200400D5F8CA /* main.m */,
+				490DE4851ADC246700D5F8CA /* screen-welcome.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				490DE46B1ADC200400D5F8CA /* Main.storyboard in Resources */,
 				490DE4701ADC200400D5F8CA /* LaunchScreen.xib in Resources */,
+				490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */,
 				490DE46D1ADC200400D5F8CA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
