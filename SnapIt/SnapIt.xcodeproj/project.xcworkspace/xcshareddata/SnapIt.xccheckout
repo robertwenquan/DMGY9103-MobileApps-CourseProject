@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>919230D7-5295-4A60-A915-4A5E132BE912</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SnapIt</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
 		<string>https://github.com/robertwenquan/DMGY9103-MobileApps-CourseProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SnapIt/SnapIt.xcodeproj/project.xcworkspace</string>
+	<string>SnapIt/SnapIt.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
