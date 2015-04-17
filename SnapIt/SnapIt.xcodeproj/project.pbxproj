@@ -17,6 +17,23 @@
 		490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490DE4851ADC246700D5F8CA /* screen-welcome.jpg */; };
 		4921EEE61ADF38DA0094E073 /* SNPInspireViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4921EEE51ADF38DA0094E073 /* SNPInspireViewController.xib */; };
 		4921EEE81ADF3A960094E073 /* SNPDetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4921EEE71ADF3A960094E073 /* SNPDetailedViewController.xib */; };
+		49CD52BD1AE1191600060BAF /* IMG_6670.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52B91AE1191600060BAF /* IMG_6670.jpg */; };
+		49CD52BE1AE1191600060BAF /* IMG_6678.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52BA1AE1191600060BAF /* IMG_6678.jpg */; };
+		49CD52BF1AE1191600060BAF /* IMG_6958.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52BB1AE1191600060BAF /* IMG_6958.jpg */; };
+		49CD52C01AE1191600060BAF /* IMG_6961.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52BC1AE1191600060BAF /* IMG_6961.jpg */; };
+		49CD52C81AE1193800060BAF /* aperture-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C11AE1193800060BAF /* aperture-50px.png */; };
+		49CD52C91AE1193800060BAF /* camera-snap.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C21AE1193800060BAF /* camera-snap.png */; };
+		49CD52CA1AE1193800060BAF /* exposure-bias-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C31AE1193800060BAF /* exposure-bias-50px.png */; };
+		49CD52CB1AE1193800060BAF /* focal-lens.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C41AE1193800060BAF /* focal-lens.png */; };
+		49CD52CC1AE1193800060BAF /* iso-speed-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C51AE1193800060BAF /* iso-speed-50px.png */; };
+		49CD52CD1AE1193800060BAF /* shutter-speed-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C61AE1193800060BAF /* shutter-speed-50px.png */; };
+		49CD52CE1AE1193800060BAF /* white-balance.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52C71AE1193800060BAF /* white-balance.png */; };
+		49CD52D51AE1196000060BAF /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52CF1AE1196000060BAF /* 58.png */; };
+		49CD52D61AE1196000060BAF /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D01AE1196000060BAF /* 80.png */; };
+		49CD52D71AE1196000060BAF /* 87.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D11AE1196000060BAF /* 87.png */; };
+		49CD52D81AE1196000060BAF /* 90.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D21AE1196000060BAF /* 90.png */; };
+		49CD52D91AE1196000060BAF /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D31AE1196000060BAF /* 120.png */; };
+		49CD52DA1AE1196000060BAF /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D41AE1196000060BAF /* 180.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +63,23 @@
 		490DE4851ADC246700D5F8CA /* screen-welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-welcome.jpg"; sourceTree = "<group>"; };
 		4921EEE51ADF38DA0094E073 /* SNPInspireViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNPInspireViewController.xib; sourceTree = "<group>"; };
 		4921EEE71ADF3A960094E073 /* SNPDetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNPDetailedViewController.xib; sourceTree = "<group>"; };
+		49CD52B91AE1191600060BAF /* IMG_6670.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6670.jpg; sourceTree = "<group>"; };
+		49CD52BA1AE1191600060BAF /* IMG_6678.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6678.jpg; sourceTree = "<group>"; };
+		49CD52BB1AE1191600060BAF /* IMG_6958.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6958.jpg; sourceTree = "<group>"; };
+		49CD52BC1AE1191600060BAF /* IMG_6961.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6961.jpg; sourceTree = "<group>"; };
+		49CD52C11AE1193800060BAF /* aperture-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aperture-50px.png"; sourceTree = "<group>"; };
+		49CD52C21AE1193800060BAF /* camera-snap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-snap.png"; sourceTree = "<group>"; };
+		49CD52C31AE1193800060BAF /* exposure-bias-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exposure-bias-50px.png"; sourceTree = "<group>"; };
+		49CD52C41AE1193800060BAF /* focal-lens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focal-lens.png"; sourceTree = "<group>"; };
+		49CD52C51AE1193800060BAF /* iso-speed-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iso-speed-50px.png"; sourceTree = "<group>"; };
+		49CD52C61AE1193800060BAF /* shutter-speed-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shutter-speed-50px.png"; sourceTree = "<group>"; };
+		49CD52C71AE1193800060BAF /* white-balance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-balance.png"; sourceTree = "<group>"; };
+		49CD52CF1AE1196000060BAF /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		49CD52D01AE1196000060BAF /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
+		49CD52D11AE1196000060BAF /* 87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 87.png; sourceTree = "<group>"; };
+		49CD52D21AE1196000060BAF /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 90.png; sourceTree = "<group>"; };
+		49CD52D31AE1196000060BAF /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
+		49CD52D41AE1196000060BAF /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +141,23 @@
 				490DE4601ADC200400D5F8CA /* Info.plist */,
 				490DE4611ADC200400D5F8CA /* main.m */,
 				490DE4851ADC246700D5F8CA /* screen-welcome.jpg */,
+				49CD52B91AE1191600060BAF /* IMG_6670.jpg */,
+				49CD52BA1AE1191600060BAF /* IMG_6678.jpg */,
+				49CD52BB1AE1191600060BAF /* IMG_6958.jpg */,
+				49CD52BC1AE1191600060BAF /* IMG_6961.jpg */,
+				49CD52C11AE1193800060BAF /* aperture-50px.png */,
+				49CD52C21AE1193800060BAF /* camera-snap.png */,
+				49CD52C31AE1193800060BAF /* exposure-bias-50px.png */,
+				49CD52C41AE1193800060BAF /* focal-lens.png */,
+				49CD52C51AE1193800060BAF /* iso-speed-50px.png */,
+				49CD52C61AE1193800060BAF /* shutter-speed-50px.png */,
+				49CD52C71AE1193800060BAF /* white-balance.png */,
+				49CD52CF1AE1196000060BAF /* 58.png */,
+				49CD52D01AE1196000060BAF /* 80.png */,
+				49CD52D11AE1196000060BAF /* 87.png */,
+				49CD52D21AE1196000060BAF /* 90.png */,
+				49CD52D31AE1196000060BAF /* 120.png */,
+				49CD52D41AE1196000060BAF /* 180.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -209,12 +260,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CD52D71AE1196000060BAF /* 87.png in Resources */,
+				49CD52D91AE1196000060BAF /* 120.png in Resources */,
+				49CD52CD1AE1193800060BAF /* shutter-speed-50px.png in Resources */,
 				490DE46B1ADC200400D5F8CA /* Main.storyboard in Resources */,
+				49CD52BD1AE1191600060BAF /* IMG_6670.jpg in Resources */,
+				49CD52C81AE1193800060BAF /* aperture-50px.png in Resources */,
+				49CD52D51AE1196000060BAF /* 58.png in Resources */,
+				49CD52CC1AE1193800060BAF /* iso-speed-50px.png in Resources */,
+				49CD52D81AE1196000060BAF /* 90.png in Resources */,
+				49CD52DA1AE1196000060BAF /* 180.png in Resources */,
+				49CD52BE1AE1191600060BAF /* IMG_6678.jpg in Resources */,
 				490DE4701ADC200400D5F8CA /* LaunchScreen.xib in Resources */,
 				490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */,
 				4921EEE61ADF38DA0094E073 /* SNPInspireViewController.xib in Resources */,
 				490DE46D1ADC200400D5F8CA /* Images.xcassets in Resources */,
 				4921EEE81ADF3A960094E073 /* SNPDetailedViewController.xib in Resources */,
+				49CD52BF1AE1191600060BAF /* IMG_6958.jpg in Resources */,
+				49CD52CA1AE1193800060BAF /* exposure-bias-50px.png in Resources */,
+				49CD52D61AE1196000060BAF /* 80.png in Resources */,
+				49CD52CB1AE1193800060BAF /* focal-lens.png in Resources */,
+				49CD52C91AE1193800060BAF /* camera-snap.png in Resources */,
+				49CD52CE1AE1193800060BAF /* white-balance.png in Resources */,
+				49CD52C01AE1191600060BAF /* IMG_6961.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
