@@ -34,7 +34,7 @@
 		49CD52D81AE1196000060BAF /* 90.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D21AE1196000060BAF /* 90.png */; };
 		49CD52D91AE1196000060BAF /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D31AE1196000060BAF /* 120.png */; };
 		49CD52DA1AE1196000060BAF /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D41AE1196000060BAF /* 180.png */; };
-		49CD52DC1AE15D2E00060BAF /* libiphone-exif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD52DB1AE15D2E00060BAF /* libiphone-exif.a */; };
+		49CD52DE1AE15DCF00060BAF /* libiphone-exif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +82,7 @@
 		49CD52D31AE1196000060BAF /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		49CD52D41AE1196000060BAF /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
 		49CD52DB1AE15D2E00060BAF /* libiphone-exif.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiphone-exif.a"; path = "../../../../Downloads/iphone-exif-0-9.1/Release-iphoneos/libiphone-exif.a"; sourceTree = "<group>"; };
+		49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiphone-exif.a"; path = "../iphone-exif-0-9.1/Release-iphoneos/libiphone-exif.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CD52DC1AE15D2E00060BAF /* libiphone-exif.a in Frameworks */,
+				49CD52DE1AE15DCF00060BAF /* libiphone-exif.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +107,7 @@
 		490DE4531ADC200400D5F8CA = {
 			isa = PBXGroup;
 			children = (
+				49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */,
 				49CD52DB1AE15D2E00060BAF /* libiphone-exif.a */,
 				490DE45E1ADC200400D5F8CA /* SnapIt */,
 				490DE4781ADC200400D5F8CA /* SnapItTests */,
@@ -439,6 +441,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/robertwen/Downloads/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -455,6 +458,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/robertwen/Downloads/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
