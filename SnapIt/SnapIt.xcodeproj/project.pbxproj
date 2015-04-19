@@ -12,11 +12,8 @@
 		490DE4681ADC200400D5F8CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490DE4671ADC200400D5F8CA /* ViewController.m */; };
 		490DE46B1ADC200400D5F8CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490DE4691ADC200400D5F8CA /* Main.storyboard */; };
 		490DE46D1ADC200400D5F8CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490DE46C1ADC200400D5F8CA /* Images.xcassets */; };
-		490DE4701ADC200400D5F8CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490DE46E1ADC200400D5F8CA /* LaunchScreen.xib */; };
 		490DE47C1ADC200400D5F8CA /* SnapItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 490DE47B1ADC200400D5F8CA /* SnapItTests.m */; };
 		490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490DE4851ADC246700D5F8CA /* screen-welcome.jpg */; };
-		4921EEE61ADF38DA0094E073 /* SNPInspireViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4921EEE51ADF38DA0094E073 /* SNPInspireViewController.xib */; };
-		4921EEE81ADF3A960094E073 /* SNPDetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4921EEE71ADF3A960094E073 /* SNPDetailedViewController.xib */; };
 		49CD52BD1AE1191600060BAF /* IMG_6670.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52B91AE1191600060BAF /* IMG_6670.jpg */; };
 		49CD52BE1AE1191600060BAF /* IMG_6678.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52BA1AE1191600060BAF /* IMG_6678.jpg */; };
 		49CD52BF1AE1191600060BAF /* IMG_6958.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52BB1AE1191600060BAF /* IMG_6958.jpg */; };
@@ -34,7 +31,7 @@
 		49CD52D81AE1196000060BAF /* 90.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D21AE1196000060BAF /* 90.png */; };
 		49CD52D91AE1196000060BAF /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D31AE1196000060BAF /* 120.png */; };
 		49CD52DA1AE1196000060BAF /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 49CD52D41AE1196000060BAF /* 180.png */; };
-		49CD52DE1AE15DCF00060BAF /* libiphone-exif.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */; };
+		49CD53061AE1678300060BAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD53051AE1678300060BAF /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,13 +54,10 @@
 		490DE4671ADC200400D5F8CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		490DE46A1ADC200400D5F8CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		490DE46C1ADC200400D5F8CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		490DE46F1ADC200400D5F8CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		490DE4751ADC200400D5F8CA /* SnapItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490DE47A1ADC200400D5F8CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		490DE47B1ADC200400D5F8CA /* SnapItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnapItTests.m; sourceTree = "<group>"; };
 		490DE4851ADC246700D5F8CA /* screen-welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-welcome.jpg"; sourceTree = "<group>"; };
-		4921EEE51ADF38DA0094E073 /* SNPInspireViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNPInspireViewController.xib; sourceTree = "<group>"; };
-		4921EEE71ADF3A960094E073 /* SNPDetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SNPDetailedViewController.xib; sourceTree = "<group>"; };
 		49CD52B91AE1191600060BAF /* IMG_6670.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6670.jpg; sourceTree = "<group>"; };
 		49CD52BA1AE1191600060BAF /* IMG_6678.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6678.jpg; sourceTree = "<group>"; };
 		49CD52BB1AE1191600060BAF /* IMG_6958.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6958.jpg; sourceTree = "<group>"; };
@@ -81,8 +75,7 @@
 		49CD52D21AE1196000060BAF /* 90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 90.png; sourceTree = "<group>"; };
 		49CD52D31AE1196000060BAF /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		49CD52D41AE1196000060BAF /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
-		49CD52DB1AE15D2E00060BAF /* libiphone-exif.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiphone-exif.a"; path = "../../../../Downloads/iphone-exif-0-9.1/Release-iphoneos/libiphone-exif.a"; sourceTree = "<group>"; };
-		49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libiphone-exif.a"; path = "../iphone-exif-0-9.1/Release-iphoneos/libiphone-exif.a"; sourceTree = "<group>"; };
+		49CD53051AE1678300060BAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49CD52DE1AE15DCF00060BAF /* libiphone-exif.a in Frameworks */,
+				49CD53061AE1678300060BAF /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +100,7 @@
 		490DE4531ADC200400D5F8CA = {
 			isa = PBXGroup;
 			children = (
-				49CD52DD1AE15DCF00060BAF /* libiphone-exif.a */,
-				49CD52DB1AE15D2E00060BAF /* libiphone-exif.a */,
+				49CD53051AE1678300060BAF /* UIKit.framework */,
 				490DE45E1ADC200400D5F8CA /* SnapIt */,
 				490DE4781ADC200400D5F8CA /* SnapItTests */,
 				490DE45D1ADC200400D5F8CA /* Products */,
@@ -133,10 +125,7 @@
 				490DE4671ADC200400D5F8CA /* ViewController.m */,
 				490DE4691ADC200400D5F8CA /* Main.storyboard */,
 				490DE46C1ADC200400D5F8CA /* Images.xcassets */,
-				490DE46E1ADC200400D5F8CA /* LaunchScreen.xib */,
 				490DE45F1ADC200400D5F8CA /* Supporting Files */,
-				4921EEE51ADF38DA0094E073 /* SNPInspireViewController.xib */,
-				4921EEE71ADF3A960094E073 /* SNPDetailedViewController.xib */,
 			);
 			path = SnapIt;
 			sourceTree = "<group>";
@@ -277,11 +266,8 @@
 				49CD52D81AE1196000060BAF /* 90.png in Resources */,
 				49CD52DA1AE1196000060BAF /* 180.png in Resources */,
 				49CD52BE1AE1191600060BAF /* IMG_6678.jpg in Resources */,
-				490DE4701ADC200400D5F8CA /* LaunchScreen.xib in Resources */,
 				490DE4861ADC246700D5F8CA /* screen-welcome.jpg in Resources */,
-				4921EEE61ADF38DA0094E073 /* SNPInspireViewController.xib in Resources */,
 				490DE46D1ADC200400D5F8CA /* Images.xcassets in Resources */,
-				4921EEE81ADF3A960094E073 /* SNPDetailedViewController.xib in Resources */,
 				49CD52BF1AE1191600060BAF /* IMG_6958.jpg in Resources */,
 				49CD52CA1AE1193800060BAF /* exposure-bias-50px.png in Resources */,
 				49CD52D61AE1196000060BAF /* 80.png in Resources */,
@@ -337,14 +323,6 @@
 				490DE46A1ADC200400D5F8CA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		490DE46E1ADC200400D5F8CA /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				490DE46F1ADC200400D5F8CA /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -435,6 +413,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SnapIt/PrefixHeader.pch";
 				INFOPLIST_FILE = SnapIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,6 +422,7 @@
 					"$(inherited)",
 					"/Users/robertwen/Downloads/iphone-exif-0-9.1/Release-iphoneos",
 					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-simulator-iphonesimulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -452,6 +433,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/SnapIt/PrefixHeader.pch";
 				INFOPLIST_FILE = SnapIt/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -459,6 +442,7 @@
 					"$(inherited)",
 					"/Users/robertwen/Downloads/iphone-exif-0-9.1/Release-iphoneos",
 					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-iphoneos",
+					"/Users/robertwen/Desktop/iosdev/course_project/iphone-exif-0-9.1/Release-simulator-iphonesimulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
