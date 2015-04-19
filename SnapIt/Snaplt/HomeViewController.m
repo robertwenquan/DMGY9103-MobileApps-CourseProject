@@ -44,45 +44,7 @@
     
     [self takePhoto];
     
-    
-    //Like Button
-    UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    likeBtn.frame = CGRectMake(self.view.center.x-30, _imageView.frame.origin.y+_imageView.frame.size.height+5, 60, 20);
-    [likeBtn setTitle:@"LIKE!" forState:UIControlStateNormal];
-    [likeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [likeBtn setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
-    [likeBtn addTarget:self action:@selector(likeBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:likeBtn];
-    
-    
-    
-    //UIScrollView
-    self.scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, _imageView.frame.origin.y+_imageView.frame.size.height+35, self.view.bounds.size.width, 110)];
-    self.scrollView.tag=0x001000;
-    self.scrollView.backgroundColor=[UIColor whiteColor];
-    self.scrollView.scrollEnabled=YES;
-    self.scrollView.bounces=YES;
-    self.scrollView.pagingEnabled=YES;
-    self.scrollView.showsHorizontalScrollIndicator=YES;
-    self.scrollView.showsVerticalScrollIndicator=YES;
-    self.scrollView.directionalLockEnabled=YES;
-    self.scrollView.delegate=self;
-    self.scrollView.contentSize=CGSizeMake(self.view.bounds.size.width*4, self.scrollView.frame.size.height);
-    
-    CGFloat width = self.scrollView.frame.size.width/3;
-    CGFloat height = self.scrollView.frame.size.height;
-    for (int i = 0; i < 4; i++)
-    {
-        UIImageView *aView = [[UIImageView alloc] initWithFrame:CGRectMake(i*width, 0, width, height)];
-        NSString *str = [NSString stringWithFormat:@"0%d.jpg", (i+1)];
-        aView.image = [UIImage imageNamed:str];
-        [self.scrollView addSubview:aView];
-        
-        UITapGestureRecognizer *tapToPush=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToPush:)];
-        [self.scrollView addGestureRecognizer:tapToPush];
-    }
-    
-    [self.view addSubview:self.scrollView];
+
 
     
 }
@@ -152,6 +114,46 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    
+    
+    //Like Button
+    UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    likeBtn.frame = CGRectMake(self.view.center.x-30, _imageView.frame.origin.y+_imageView.frame.size.height+5, 60, 20);
+    [likeBtn setTitle:@"LIKE!" forState:UIControlStateNormal];
+    [likeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [likeBtn setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
+    [likeBtn addTarget:self action:@selector(likeBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:likeBtn];
+    
+    
+    
+    //UIScrollView
+    self.scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, _imageView.frame.origin.y+_imageView.frame.size.height+35, self.view.bounds.size.width, 110)];
+    self.scrollView.tag=0x001000;
+    self.scrollView.backgroundColor=[UIColor whiteColor];
+    self.scrollView.scrollEnabled=YES;
+    self.scrollView.bounces=YES;
+    self.scrollView.pagingEnabled=YES;
+    self.scrollView.showsHorizontalScrollIndicator=YES;
+    self.scrollView.showsVerticalScrollIndicator=YES;
+    self.scrollView.directionalLockEnabled=YES;
+    self.scrollView.delegate=self;
+    self.scrollView.contentSize=CGSizeMake(self.view.bounds.size.width*4, self.scrollView.frame.size.height);
+    
+    CGFloat width = self.scrollView.frame.size.width/3;
+    CGFloat height = self.scrollView.frame.size.height;
+    for (int i = 0; i < 4; i++)
+    {
+        UIImageView *aView = [[UIImageView alloc] initWithFrame:CGRectMake(i*width, 0, width, height)];
+        NSString *str = [NSString stringWithFormat:@"0%d.jpg", (i+1)];
+        aView.image = [UIImage imageNamed:str];
+        [self.scrollView addSubview:aView];
+        
+        UITapGestureRecognizer *tapToPush=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapToPush:)];
+        [self.scrollView addGestureRecognizer:tapToPush];
+    }
+    
+    [self.view addSubview:self.scrollView];
     
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
     {
