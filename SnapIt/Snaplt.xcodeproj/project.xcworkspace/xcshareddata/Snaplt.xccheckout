@@ -10,31 +10,31 @@
 	<string>Snaplt</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2417C20F9E462139F957899F6DEF8F7F238238A9</key>
-		<string>https://github.com/robertwenquan/SnapIt.git</string>
+		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
+		<string>https://github.com/robertwenquan/DMGY9103-MobileApps-CourseProject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Snaplt/Snaplt.xcodeproj</string>
+	<string>SnapIt/Snaplt.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2417C20F9E462139F957899F6DEF8F7F238238A9</key>
+		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/robertwenquan/SnapIt.git</string>
+	<string>https://github.com/robertwenquan/DMGY9103-MobileApps-CourseProject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2417C20F9E462139F957899F6DEF8F7F238238A9</string>
+	<string>E6B8417CB04EF87E151FE50D5390D98892F61EAD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2417C20F9E462139F957899F6DEF8F7F238238A9</string>
+			<string>E6B8417CB04EF87E151FE50D5390D98892F61EAD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SnapIt</string>
+			<string>course_project</string>
 		</dict>
 	</array>
 </dict>
