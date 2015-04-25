@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-#import <ImageIO/ImageIO.h>
 
 @interface AppDelegate ()
 
@@ -38,43 +37,7 @@
     self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     
-    
-    /* The following is a section of sample code of reading 
-     EXIF data from a JPEG image file
-     
-    NSURL *imageFileURL = [[NSBundle mainBundle]
-                           URLForResource: @"01" withExtension:@"jpg"];
-    
-    CGImageSourceRef imageSource = CGImageSourceCreateWithURL((CFURLRef)imageFileURL, NULL);
-    
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                             [NSNumber numberWithBool:NO], (NSString *)kCGImageSourceShouldCache,
-                             nil];
-
-    CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (CFDictionaryRef)options);
-    if (imageProperties) {
-        NSNumber *width = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
-        NSNumber *height = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelHeight);
-        NSLog(@"Image dimensions: %@ x %@ px", width, height);
-    }
-    
-    CFDictionaryRef exif = CFDictionaryGetValue(imageProperties, kCGImagePropertyExifDictionary);
-    if (exif) {
-        NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
-        NSLog(@"Date Taken: %@", dateTakenString);
-        
-        NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
-        NSLog(@"Exposure Time: %@", Exposure);
-    }
-
-    CFRelease(imageProperties);
-    CFRelease(imageSource);
-     
-    END of the sample code
-    */
-    
     return YES;
-
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

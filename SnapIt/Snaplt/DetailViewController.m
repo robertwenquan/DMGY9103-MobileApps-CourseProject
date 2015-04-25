@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "TakeViewController.h"
+
 #define colorwithrgb(x,y,z,alp) [UIColor colorWithRed:(x)/255.0 green:(y)/255.0 blue:(z)/255.0 alpha:(alp)]
 
 @interface DetailViewController ()
@@ -17,6 +18,7 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -39,6 +41,8 @@
 
 - (void)nextVC
 {
+    NSLog(@"Enter nextVC");
+    
     TakeViewController * takeVC = [[TakeViewController alloc]init];
     [self.navigationController pushViewController:takeVC animated:YES];
 }

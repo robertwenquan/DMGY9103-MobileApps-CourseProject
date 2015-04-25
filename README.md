@@ -1,7 +1,6 @@
 # DMGY9103 MobileApps Course Project
 == DMGY9103 iOS Programming Course Project
 
-
 === Basic Goals
 * App can take a picture and save it
 * App can show inspirational pictures in a separate interface

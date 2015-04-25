@@ -10,6 +10,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "DetailViewController.h"
+#import <ImageIO/ImageIO.h>
 
 
 @interface HomeViewController ()
@@ -59,6 +60,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)printEXIF:(int)num
+{
+    NSLog(@"Print EXIF %d", num);
+    
+    /* The following is a section of sample code of reading
+     EXIF data from a JPEG image file
+     */
+    
+    NSString *strFromInt = [NSString stringWithFormat:@"%02d", num];
+    
+    NSURL *imageFileURL = [[NSBundle mainBundle]
+                           URLForResource: strFromInt withExtension:@"jpg"];
+    
+    CGImageSourceRef imageSource = CGImageSourceCreateWithURL((CFURLRef)imageFileURL, NULL);
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithBool:NO], (NSString *)kCGImageSourceShouldCache,
+                             nil];
+    
+    CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (CFDictionaryRef)options);
+    if (imageProperties) {
+        NSNumber *width = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
+        NSNumber *height = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelHeight);
+        NSLog(@"Image dimensions: %@ x %@ px", width, height);
+    }
+    
+    CFDictionaryRef exif = CFDictionaryGetValue(imageProperties, kCGImagePropertyExifDictionary);
+    if (exif) {
+        NSLog(@"--------------------------------");
+        NSLog(@"Printing more EXIF meta info for this picture");
+        
+        NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
+        NSLog(@"Date Taken: %@", dateTakenString);
+        
+        NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
+        NSLog(@"Exposure Time: %@", Exposure);
+        NSLog(@"--------------------------------");
+    }
+    
+    CFRelease(imageProperties);
+    CFRelease(imageSource);
+    
+    /*
+     END of the sample code
+     */
+}
+
 - (void)tapToPush:(UITapGestureRecognizer*)gesture
 {
     CGFloat gestX=[gesture locationInView:gesture.view].x;
@@ -103,6 +151,8 @@
         _imageView.image = [UIImage imageNamed:@"08.jpg"];
         _num = 8;
     }
+    
+    [self printEXIF:_num];
 }
 
 - (void)takePhoto
