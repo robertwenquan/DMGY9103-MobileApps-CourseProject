@@ -71,17 +71,37 @@
     else if (gestX>width && gestX<width*2)
     {
         _imageView.image = [UIImage imageNamed:@"02.jpg"];
-        _num =2;
+        _num = 2;
     }
     else if(gestX>width*2 && gestX<width*3)
     {
         _imageView.image = [UIImage imageNamed:@"03.jpg"];
-        _num =3;
+        _num = 3;
     }
-    else
+    else if(gestX>width*3 && gestX<width*4)
     {
         _imageView.image = [UIImage imageNamed:@"04.jpg"];
         _num = 4;
+    }
+    else if(gestX>width*4 && gestX<width*5)
+    {
+        _imageView.image = [UIImage imageNamed:@"05.jpg"];
+        _num = 5;
+    }
+    else if(gestX>width*5 && gestX<width*6)
+    {
+        _imageView.image = [UIImage imageNamed:@"06.jpg"];
+        _num = 6;
+    }
+    else if(gestX>width*6 && gestX<width*7)
+    {
+        _imageView.image = [UIImage imageNamed:@"07.jpg"];
+        _num = 7;
+    }
+    else
+    {
+        _imageView.image = [UIImage imageNamed:@"08.jpg"];
+        _num = 8;
     }
 }
 
@@ -99,7 +119,6 @@
     _pickerVC.allowsEditing = NO;
     
     [self presentViewController:_pickerVC animated:YES completion:^{}];
-    
     
 }
 
@@ -124,7 +143,6 @@
     [self.view addSubview:likeBtn];
     
     
-    
     //UIScrollView
     self.scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, _imageView.frame.origin.y+_imageView.frame.size.height+35, self.view.bounds.size.width, 110)];
     self.scrollView.tag=0x001000;
@@ -140,7 +158,7 @@
     
     CGFloat width = self.scrollView.frame.size.width/3;
     CGFloat height = self.scrollView.frame.size.height;
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 8; i++)
     {
         UIImageView *aView = [[UIImageView alloc] initWithFrame:CGRectMake(i*width, 0, width, height)];
         NSString *str = [NSString stringWithFormat:@"0%d.jpg", (i+1)];
