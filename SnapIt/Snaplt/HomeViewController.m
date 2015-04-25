@@ -18,7 +18,6 @@
 
 
 
-
 @implementation HomeViewController
 
 - (void)viewDidLoad {
@@ -43,9 +42,6 @@
     [self.view addSubview:_imageView];
     
     [self takePhoto];
-    
-
-
     
 }
 
