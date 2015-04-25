@@ -3,7 +3,7 @@
 //  Snaplt
 //
 //  Created by apple on 15/4/16.
-//  Copyright (c) 2015年 apple. All rights reserved.
+//  Copyright (c) 2015 apple. All rights reserved.
 //
 
 #import "HomeViewController.h"
@@ -21,9 +21,11 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"PHOTO";
+    
     // Do any additional setup after loading the view.
     
     
