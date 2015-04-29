@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = colorwithrgb(16, 100, 100, 1.0);
+    self.view.backgroundColor = colorwithrgb(0, 0, 0, 1.0);
     self.title =@"Statistics";
     
     // Create a paged scroll view controller here to show four pictures
@@ -42,18 +42,56 @@
     
     /* SHOOTING PARAMETERS */
     
+    NSLog(@"Come on, show the meta data of the photo");
+    
     // aperture
+    UILabel *apertureLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 430, 100, 30)];
+    apertureLabel.text = @"APERTURE";
+    apertureLabel.textColor = [UIColor whiteColor];
+    apertureLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    apertureLabel.numberOfLines = 1;
+    [self.view addSubview:apertureLabel];
     
     // shutter speed
+    UILabel *shutterLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 430, 100, 30)];
+    shutterLabel.text = @"Shutter";
+    shutterLabel.textColor = [UIColor whiteColor];
+    shutterLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    shutterLabel.numberOfLines = 1;
+    [self.view addSubview:shutterLabel];
     
     // ISO speed
+    UILabel *iosLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 430, 100, 30)];
+    iosLabel.text = @"ISO";
+    iosLabel.textColor = [UIColor whiteColor];
+    iosLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    iosLabel.numberOfLines = 1;
+    [self.view addSubview:iosLabel];
     
     // focal length
+    UILabel *focalLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 480, 100, 30)];
+    focalLabel.text = @"Focal Length";
+    focalLabel.textColor = [UIColor whiteColor];
+    focalLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    focalLabel.numberOfLines = 1;
+    [self.view addSubview:focalLabel];
     
     // exposure compensation
+    UILabel *exposureLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 480, 100, 30)];
+    exposureLabel.text = @"Exposure +/-";
+    exposureLabel.textColor = [UIColor whiteColor];
+    exposureLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    exposureLabel.numberOfLines = 1;
+    [self.view addSubview:exposureLabel];
     
     // white balance
-    
+    UILabel *wbLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 480, 100, 30)];
+    wbLabel.text = @"White Balance";
+    wbLabel.textColor = [UIColor whiteColor];
+    wbLabel.font = [UIFont fontWithName:@"Arial" size:12];
+    wbLabel.numberOfLines = 1;
+    [self.view addSubview:wbLabel];
+
     // This is the snap a photo button
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     photoBtn.frame = CGRectMake(20, self.view.frame.size.height-35, 30, 30);
