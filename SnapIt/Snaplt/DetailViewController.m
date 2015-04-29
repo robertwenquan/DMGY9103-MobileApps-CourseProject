@@ -52,6 +52,13 @@
     apertureLabel.numberOfLines = 1;
     [self.view addSubview:apertureLabel];
     
+    UILabel *apertureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 450, 100, 30)];
+    apertureTextLabel.text = @"F11";
+    apertureTextLabel.textColor = [UIColor whiteColor];
+    apertureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    apertureTextLabel.numberOfLines = 1;
+    [self.view addSubview:apertureTextLabel];
+    
     // shutter speed
     UILabel *shutterLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 430, 100, 30)];
     shutterLabel.text = @"Shutter";
@@ -59,6 +66,13 @@
     shutterLabel.font = [UIFont fontWithName:@"Arial" size:12];
     shutterLabel.numberOfLines = 1;
     [self.view addSubview:shutterLabel];
+    
+    UILabel *shutterTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 450, 100, 30)];
+    shutterTextLabel.text = @"1/200";
+    shutterTextLabel.textColor = [UIColor whiteColor];
+    shutterTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    shutterTextLabel.numberOfLines = 1;
+    [self.view addSubview:shutterTextLabel];
     
     // ISO speed
     UILabel *iosLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 430, 100, 30)];
@@ -68,6 +82,13 @@
     iosLabel.numberOfLines = 1;
     [self.view addSubview:iosLabel];
     
+    UILabel *iosTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 450, 100, 30)];
+    iosTextLabel.text = @"100";
+    iosTextLabel.textColor = [UIColor whiteColor];
+    iosTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    iosTextLabel.numberOfLines = 1;
+    [self.view addSubview:iosTextLabel];
+    
     // focal length
     UILabel *focalLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 480, 100, 30)];
     focalLabel.text = @"Focal Length";
@@ -75,6 +96,13 @@
     focalLabel.font = [UIFont fontWithName:@"Arial" size:12];
     focalLabel.numberOfLines = 1;
     [self.view addSubview:focalLabel];
+    
+    UILabel *focalTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 500, 100, 30)];
+    focalTextLabel.text = @"70mm";
+    focalTextLabel.textColor = [UIColor whiteColor];
+    focalTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    focalTextLabel.numberOfLines = 1;
+    [self.view addSubview:focalTextLabel];
     
     // exposure compensation
     UILabel *exposureLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 480, 100, 30)];
@@ -84,6 +112,13 @@
     exposureLabel.numberOfLines = 1;
     [self.view addSubview:exposureLabel];
     
+    UILabel *exposureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 500, 100, 30)];
+    exposureTextLabel.text = @"-1/3 EV";
+    exposureTextLabel.textColor = [UIColor whiteColor];
+    exposureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    exposureTextLabel.numberOfLines = 1;
+    [self.view addSubview:exposureTextLabel];
+    
     // white balance
     UILabel *wbLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 480, 100, 30)];
     wbLabel.text = @"White Balance";
@@ -91,7 +126,22 @@
     wbLabel.font = [UIFont fontWithName:@"Arial" size:12];
     wbLabel.numberOfLines = 1;
     [self.view addSubview:wbLabel];
+    
+    UILabel *wbTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 500, 100, 30)];
+    wbTextLabel.text = @"Auto";
+    wbTextLabel.textColor = [UIColor whiteColor];
+    wbTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    wbTextLabel.numberOfLines = 1;
+    [self.view addSubview:wbTextLabel];
 
+    
+    
+    
+    
+    
+    
+    
+    
     // This is the snap a photo button
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     photoBtn.frame = CGRectMake(20, self.view.frame.size.height-35, 30, 30);
