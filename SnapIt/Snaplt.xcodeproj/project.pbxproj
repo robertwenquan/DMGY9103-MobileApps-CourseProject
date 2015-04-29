@@ -30,6 +30,13 @@
 		18F8A88A1AE1607D00B37EE5 /* 03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A8831AE1607D00B37EE5 /* 03.jpg */; };
 		18F8A88B1AE1607D00B37EE5 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A8841AE1607D00B37EE5 /* 04.jpg */; };
 		18F8A88C1AE1607D00B37EE5 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18F8A8841AE1607D00B37EE5 /* 04.jpg */; };
+		490C2E2F1AF18AE700060397 /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E2E1AF18AE700060397 /* camera-icon.png */; };
+		490C2E361AF18B0B00060397 /* aperture-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E301AF18B0B00060397 /* aperture-50px.png */; };
+		490C2E371AF18B0B00060397 /* exposure-bias-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E311AF18B0B00060397 /* exposure-bias-50px.png */; };
+		490C2E381AF18B0B00060397 /* focal-lens.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E321AF18B0B00060397 /* focal-lens.png */; };
+		490C2E391AF18B0B00060397 /* iso-speed-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E331AF18B0B00060397 /* iso-speed-50px.png */; };
+		490C2E3A1AF18B0B00060397 /* shutter-speed-50px.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E341AF18B0B00060397 /* shutter-speed-50px.png */; };
+		490C2E3B1AF18B0B00060397 /* white-balance.png in Resources */ = {isa = PBXBuildFile; fileRef = 490C2E351AF18B0B00060397 /* white-balance.png */; };
 		491180721AEC2E4100A686A5 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4911806E1AEC2E4100A686A5 /* 05.jpg */; };
 		491180731AEC2E4100A686A5 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4911806F1AEC2E4100A686A5 /* 06.jpg */; };
 		491180741AEC2E4100A686A5 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491180701AEC2E4100A686A5 /* 07.jpg */; };
@@ -74,6 +81,13 @@
 		18F8A8821AE1607D00B37EE5 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
 		18F8A8831AE1607D00B37EE5 /* 03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.jpg; sourceTree = "<group>"; };
 		18F8A8841AE1607D00B37EE5 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		490C2E2E1AF18AE700060397 /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-icon.png"; sourceTree = "<group>"; };
+		490C2E301AF18B0B00060397 /* aperture-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aperture-50px.png"; sourceTree = "<group>"; };
+		490C2E311AF18B0B00060397 /* exposure-bias-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exposure-bias-50px.png"; sourceTree = "<group>"; };
+		490C2E321AF18B0B00060397 /* focal-lens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focal-lens.png"; sourceTree = "<group>"; };
+		490C2E331AF18B0B00060397 /* iso-speed-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iso-speed-50px.png"; sourceTree = "<group>"; };
+		490C2E341AF18B0B00060397 /* shutter-speed-50px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shutter-speed-50px.png"; sourceTree = "<group>"; };
+		490C2E351AF18B0B00060397 /* white-balance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-balance.png"; sourceTree = "<group>"; };
 		4911806E1AEC2E4100A686A5 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
 		4911806F1AEC2E4100A686A5 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		491180701AEC2E4100A686A5 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
@@ -175,7 +189,14 @@
 		18F8A8731AE0BC5500B37EE5 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				490C2E2E1AF18AE700060397 /* camera-icon.png */,
 				18729FC21AE2BD9A00DB4E73 /* camera-snap.png */,
+				490C2E301AF18B0B00060397 /* aperture-50px.png */,
+				490C2E311AF18B0B00060397 /* exposure-bias-50px.png */,
+				490C2E321AF18B0B00060397 /* focal-lens.png */,
+				490C2E331AF18B0B00060397 /* iso-speed-50px.png */,
+				490C2E341AF18B0B00060397 /* shutter-speed-50px.png */,
+				490C2E351AF18B0B00060397 /* white-balance.png */,
 				18F8A8811AE1607D00B37EE5 /* 01.jpg */,
 				18F8A8821AE1607D00B37EE5 /* 02.jpg */,
 				18F8A8831AE1607D00B37EE5 /* 03.jpg */,
@@ -271,16 +292,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				18729FC31AE2BD9A00DB4E73 /* camera-snap.png in Resources */,
+				490C2E371AF18B0B00060397 /* exposure-bias-50px.png in Resources */,
+				490C2E2F1AF18AE700060397 /* camera-icon.png in Resources */,
 				491180751AEC2E4100A686A5 /* 08.jpg in Resources */,
+				490C2E3A1AF18B0B00060397 /* shutter-speed-50px.png in Resources */,
+				490C2E391AF18B0B00060397 /* iso-speed-50px.png in Resources */,
 				18F8A8891AE1607D00B37EE5 /* 03.jpg in Resources */,
+				490C2E381AF18B0B00060397 /* focal-lens.png in Resources */,
 				18F8A8751AE0BC7800B37EE5 /* screen-welcome.jpg in Resources */,
 				18F8A8581AE0BBC400B37EE5 /* Images.xcassets in Resources */,
 				491180721AEC2E4100A686A5 /* 05.jpg in Resources */,
 				491180741AEC2E4100A686A5 /* 07.jpg in Resources */,
 				491180731AEC2E4100A686A5 /* 06.jpg in Resources */,
+				490C2E3B1AF18B0B00060397 /* white-balance.png in Resources */,
 				18F8A8851AE1607D00B37EE5 /* 01.jpg in Resources */,
 				18F8A8871AE1607D00B37EE5 /* 02.jpg in Resources */,
 				4919C6481AE864C500F0FF7B /* 01.jpg in Resources */,
+				490C2E361AF18B0B00060397 /* aperture-50px.png in Resources */,
 				18F8A88B1AE1607D00B37EE5 /* 04.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

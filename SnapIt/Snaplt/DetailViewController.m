@@ -26,12 +26,18 @@
     self.title =@"Statistics";
     
     // Create a paged scroll view controller here to show four pictures
-    
 
-    
     /* CAMERA and LENS INFO */
+    UIImageView *cameraPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
+    NSString *str = [NSString stringWithFormat:@"01.jpg"];
+    cameraPhoto.image = [UIImage imageNamed:str];
+    [self.view addSubview:cameraPhoto];
     
     // camera picture (static)
+    UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(30, 380, 70, 70)];
+    NSString *str1 = [NSString stringWithFormat:@"camera-icon.png"];
+    cameraIcon.image = [UIImage imageNamed:str1];
+    [self.view addSubview:cameraIcon];
     
     // camera info
     
@@ -39,20 +45,19 @@
     
     // shoot date info
     
-    
     /* SHOOTING PARAMETERS */
     
     NSLog(@"Come on, show the meta data of the photo");
     
     // aperture
-    UILabel *apertureLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 430, 100, 30)];
+    UILabel *apertureLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 440, 100, 30)];
     apertureLabel.text = @"APERTURE";
     apertureLabel.textColor = [UIColor whiteColor];
     apertureLabel.font = [UIFont fontWithName:@"Arial" size:12];
     apertureLabel.numberOfLines = 1;
     [self.view addSubview:apertureLabel];
     
-    UILabel *apertureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 450, 100, 30)];
+    UILabel *apertureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 460, 100, 30)];
     apertureTextLabel.text = @"F11";
     apertureTextLabel.textColor = [UIColor whiteColor];
     apertureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -60,14 +65,14 @@
     [self.view addSubview:apertureTextLabel];
     
     // shutter speed
-    UILabel *shutterLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 430, 100, 30)];
+    UILabel *shutterLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 440, 100, 30)];
     shutterLabel.text = @"Shutter";
     shutterLabel.textColor = [UIColor whiteColor];
     shutterLabel.font = [UIFont fontWithName:@"Arial" size:12];
     shutterLabel.numberOfLines = 1;
     [self.view addSubview:shutterLabel];
     
-    UILabel *shutterTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 450, 100, 30)];
+    UILabel *shutterTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 460, 100, 30)];
     shutterTextLabel.text = @"1/200";
     shutterTextLabel.textColor = [UIColor whiteColor];
     shutterTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -75,14 +80,14 @@
     [self.view addSubview:shutterTextLabel];
     
     // ISO speed
-    UILabel *iosLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 430, 100, 30)];
+    UILabel *iosLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 440, 100, 30)];
     iosLabel.text = @"ISO";
     iosLabel.textColor = [UIColor whiteColor];
     iosLabel.font = [UIFont fontWithName:@"Arial" size:12];
     iosLabel.numberOfLines = 1;
     [self.view addSubview:iosLabel];
     
-    UILabel *iosTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 450, 100, 30)];
+    UILabel *iosTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 460, 100, 30)];
     iosTextLabel.text = @"100";
     iosTextLabel.textColor = [UIColor whiteColor];
     iosTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
