@@ -22,9 +22,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = colorwithrgb(16, 9, 100, 1.0);
+    self.view.backgroundColor = colorwithrgb(16, 100, 100, 1.0);
     self.title =@"Statistics";
     
+    // This is the snap a photo button
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     photoBtn.frame = CGRectMake(20, self.view.frame.size.height-35, 30, 30);
     [photoBtn setBackgroundImage:[UIImage imageNamed:@"camera-snap"] forState:UIControlStateNormal];
