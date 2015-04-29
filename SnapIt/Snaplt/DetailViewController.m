@@ -25,6 +25,35 @@
     self.view.backgroundColor = colorwithrgb(16, 100, 100, 1.0);
     self.title =@"Statistics";
     
+    // Create a paged scroll view controller here to show four pictures
+    
+
+    
+    /* CAMERA and LENS INFO */
+    
+    // camera picture (static)
+    
+    // camera info
+    
+    // lens info
+    
+    // shoot date info
+    
+    
+    /* SHOOTING PARAMETERS */
+    
+    // aperture
+    
+    // shutter speed
+    
+    // ISO speed
+    
+    // focal length
+    
+    // exposure compensation
+    
+    // white balance
+    
     // This is the snap a photo button
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     photoBtn.frame = CGRectMake(20, self.view.frame.size.height-35, 30, 30);
