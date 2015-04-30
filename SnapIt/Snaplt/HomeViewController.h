@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate>
+@interface HomeViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIScrollViewDelegate>
 {
     UIImagePickerController *_pickerVC;
     UIImageView *_imageView;

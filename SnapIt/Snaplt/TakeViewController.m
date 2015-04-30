@@ -21,9 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     self.title = @"PHOTO";
-    
+
     //ImageView displaying photos
     _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _imageView.backgroundColor = [UIColor clearColor];

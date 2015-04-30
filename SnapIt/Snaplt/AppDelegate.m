@@ -31,6 +31,7 @@
         HomeViewController *home = [[HomeViewController alloc]initWithNibName:nil bundle:nil];
         UINavigationController *rootCtr = [[UINavigationController alloc]initWithRootViewController:home];
         
+        
         self.window.rootViewController = rootCtr;
     }];
     
