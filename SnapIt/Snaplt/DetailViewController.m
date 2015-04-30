@@ -26,15 +26,52 @@
     self.title =@"Photo Info";
     
     // Create a paged scroll view controller here to show four pictures
+    
+    UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
+    
+    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
+    photo1.image = [UIImage imageNamed:@"01.jpg"];
+    [photoScrollView addSubview:photo1];
+    
+    UIImageView *photo2 = [[UIImageView alloc] initWithFrame:CGRectMake(320, 0, 320, 320)];
+    photo2.image = [UIImage imageNamed:@"02.jpg"];
+    [photoScrollView addSubview:photo2];
+    
+    UIImageView *photo3 = [[UIImageView alloc] initWithFrame:CGRectMake(640, 0, 320, 320)];
+    photo3.image = [UIImage imageNamed:@"03.jpg"];
+    [photoScrollView addSubview:photo3];
+    
+    UIImageView *photo4 = [[UIImageView alloc] initWithFrame:CGRectMake(960, 0, 320, 320)];
+    photo4.image = [UIImage imageNamed:@"04.jpg"];
+    [photoScrollView addSubview:photo4];
+    
+    UIImageView *photo5 = [[UIImageView alloc] initWithFrame:CGRectMake(1280, 0, 320, 320)];
+    photo5.image = [UIImage imageNamed:@"05.jpg"];
+    [photoScrollView addSubview:photo5];
+    
+    UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1600, 0, 320, 320)];
+    photo6.image = [UIImage imageNamed:@"06.jpg"];
+    [photoScrollView addSubview:photo6];
+
+    
+    [self.view addSubview:photoScrollView];
+    
+    photoScrollView.contentSize = CGSizeMake(320 * 6, 320);
+    NSLog(@"width: %f, height: %f", self.view.frame.size.width, self.view.frame.size.height);
+    
+    photoScrollView.showsHorizontalScrollIndicator = YES;
+    photoScrollView.showsVerticalScrollIndicator = NO;
+    photoScrollView.pagingEnabled = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 
     // the scroll view pictures
-    UIImageView *cameraPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
-    NSString *str = [NSString stringWithFormat:@"01.jpg"];
-    cameraPhoto.image = [UIImage imageNamed:str];
-    [self.view addSubview:cameraPhoto];
+    //UIImageView *cameraPhoto = [[UIImageView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
+    //NSString *str = [NSString stringWithFormat:@"01.jpg"];
+    //cameraPhoto.image = [UIImage imageNamed:str];
+    //[self.view addSubview:cameraPhoto];
     
     // camera picture (static)
-    UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(15, 390, 100, 100)];
+    UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(15, 390, 80, 80)];
     NSString *str1 = [NSString stringWithFormat:@"camera-icon.png"];
     cameraIcon.image = [UIImage imageNamed:str1];
     [self.view addSubview:cameraIcon];
@@ -55,14 +92,8 @@
     [self.view addSubview:cameraTextLabel];
     
     // lens info
-    UILabel *lensLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 415, 100, 30)];
-    lensLabel.text = @"LENS";
-    lensLabel.textColor = [UIColor whiteColor];
-    lensLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
-    lensLabel.numberOfLines = 1;
-    [self.view addSubview:lensLabel];
     
-    UILabel *lensTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 428, 200, 30)];
+    UILabel *lensTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 411, 200, 30)];
     lensTextLabel.text = @"EF 24-70 F/2.8L II USM";
     lensTextLabel.textColor = [UIColor whiteColor];
     lensTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
