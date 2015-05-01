@@ -28,36 +28,36 @@
     // Create a paged scroll view controller here to show four pictures
     
     // the scroll view pictures
-    UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
+    UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(5, 68, 310, 310)];
     
-    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
+    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 310, 310)];
     photo1.image = [UIImage imageNamed:@"01.jpg"];
     [photoScrollView addSubview:photo1];
     
-    UIImageView *photo2 = [[UIImageView alloc] initWithFrame:CGRectMake(320, 0, 320, 320)];
+    UIImageView *photo2 = [[UIImageView alloc] initWithFrame:CGRectMake(310, 0, 310, 310)];
     photo2.image = [UIImage imageNamed:@"02.jpg"];
     [photoScrollView addSubview:photo2];
     
-    UIImageView *photo3 = [[UIImageView alloc] initWithFrame:CGRectMake(640, 0, 320, 320)];
+    UIImageView *photo3 = [[UIImageView alloc] initWithFrame:CGRectMake(620, 0, 310, 310)];
     photo3.image = [UIImage imageNamed:@"03.jpg"];
     [photoScrollView addSubview:photo3];
     
-    UIImageView *photo4 = [[UIImageView alloc] initWithFrame:CGRectMake(960, 0, 320, 320)];
+    UIImageView *photo4 = [[UIImageView alloc] initWithFrame:CGRectMake(930, 0, 310, 310)];
     photo4.image = [UIImage imageNamed:@"04.jpg"];
     [photoScrollView addSubview:photo4];
     
-    UIImageView *photo5 = [[UIImageView alloc] initWithFrame:CGRectMake(1280, 0, 320, 320)];
+    UIImageView *photo5 = [[UIImageView alloc] initWithFrame:CGRectMake(1240, 0, 310, 310)];
     photo5.image = [UIImage imageNamed:@"05.jpg"];
     [photoScrollView addSubview:photo5];
     
-    UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1600, 0, 320, 320)];
+    UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1550, 0, 310, 310)];
     photo6.image = [UIImage imageNamed:@"06.jpg"];
     [photoScrollView addSubview:photo6];
 
     
     [self.view addSubview:photoScrollView];
     
-    photoScrollView.contentSize = CGSizeMake(320 * 6, 320);
+    photoScrollView.contentSize = CGSizeMake(310 * 6, 310);
     NSLog(@"width: %f, height: %f", self.view.frame.size.width, self.view.frame.size.height);
     
     photoScrollView.showsHorizontalScrollIndicator = YES;
