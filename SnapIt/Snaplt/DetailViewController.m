@@ -30,7 +30,6 @@
     
     // the scroll view pictures
     UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(5, 68, 310, 310)];
-    UIPageControl *photoPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 380, 100, 20)];
     
     UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 310, 310)];
     photo1.image = [UIImage imageNamed:@"01.jpg"];
@@ -70,29 +69,30 @@
     photoScrollView.pagingEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
  
+    /* page controll */
+    UIPageControl *photoPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(120, 380, 100, 20)];
     photoPageControl.currentPage = 1;
     photoPageControl.numberOfPages = 6;
     photoPageControl.hidesForSinglePage = YES;
-    
     photoPageControl.tag = 0x001100;
     
     [self.view addSubview:photoPageControl];
     
     // camera picture (static)
-    UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(15, 390, 80, 80)];
+    UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(15, 388, 90, 90)];
     NSString *str1 = [NSString stringWithFormat:@"camera-icon.png"];
     cameraIcon.image = [UIImage imageNamed:str1];
     [self.view addSubview:cameraIcon];
     
     // camera info
-    UILabel *cameraLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 385, 200, 30)];
+    UILabel *cameraLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 395, 200, 30)];
     cameraLabel.text = @"CAMERA AND LENS";
     cameraLabel.textColor = [UIColor whiteColor];
     cameraLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
     cameraLabel.numberOfLines = 1;
     [self.view addSubview:cameraLabel];
     
-    UILabel *cameraTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 398, 200, 30)];
+    UILabel *cameraTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 408, 200, 30)];
     cameraTextLabel.text = @"CANON EOS 6D";
     cameraTextLabel.textColor = [UIColor whiteColor];
     cameraTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -101,7 +101,7 @@
     
     // lens info
     
-    UILabel *lensTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 411, 200, 30)];
+    UILabel *lensTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 421, 200, 30)];
     lensTextLabel.text = @"EF 24-70 F/2.8L II USM";
     lensTextLabel.textColor = [UIColor whiteColor];
     lensTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -109,14 +109,14 @@
     [self.view addSubview:lensTextLabel];
     
     // shoot date info
-    UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 428, 100, 30)];
+    UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 436, 100, 30)];
     dateLabel.text = @"DATE";
     dateLabel.textColor = [UIColor whiteColor];
     dateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
     dateLabel.numberOfLines = 1;
     [self.view addSubview:dateLabel];
     
-    UILabel *dateTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(130, 441, 200, 30)];
+    UILabel *dateTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 449, 200, 30)];
     dateTextLabel.text = @"2015/03/28 16:33:25";
     dateTextLabel.textColor = [UIColor whiteColor];
     dateTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -125,7 +125,7 @@
     
     
     // Add a dividing line
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(10, 470, 300, 1)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(10, 474, 300, 1)];
     lineView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:lineView];
     
@@ -195,18 +195,18 @@
     
     // focal length
     
-    UIImageView *focalIcon = [[UIImageView alloc] initWithFrame:CGRectMake(4, 507, 23, 23)];
+    UIImageView *focalIcon = [[UIImageView alloc] initWithFrame:CGRectMake(4, 504, 23, 23)];
     focalIcon.image = [UIImage imageNamed:@"focal-lens.png"];
     [self.view addSubview:focalIcon];
     
-    UILabel *focalLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 500, 100, 30)];
+    UILabel *focalLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 497, 100, 30)];
     focalLabel.text = @"Focal Length";
     focalLabel.textColor = [UIColor whiteColor];
     focalLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
     focalLabel.numberOfLines = 1;
     [self.view addSubview:focalLabel];
     
-    UILabel *focalTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 513, 100, 30)];
+    UILabel *focalTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 510, 100, 30)];
     focalTextLabel.text = @"70mm";
     focalTextLabel.textColor = [UIColor whiteColor];
     focalTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -215,18 +215,18 @@
     
     // exposure compensation
     
-    UIImageView *exposureIcon = [[UIImageView alloc] initWithFrame:CGRectMake(110, 510, 20, 20)];
+    UIImageView *exposureIcon = [[UIImageView alloc] initWithFrame:CGRectMake(110, 507, 20, 20)];
     exposureIcon.image = [UIImage imageNamed:@"exposure-bias-50px.png"];
     [self.view addSubview:exposureIcon];
     
-    UILabel *exposureLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 500, 100, 30)];
+    UILabel *exposureLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 497, 100, 30)];
     exposureLabel.text = @"Exposure +/-";
     exposureLabel.textColor = [UIColor whiteColor];
     exposureLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
     exposureLabel.numberOfLines = 1;
     [self.view addSubview:exposureLabel];
     
-    UILabel *exposureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 513, 100, 30)];
+    UILabel *exposureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 510, 100, 30)];
     exposureTextLabel.text = @"-1/3 EV";
     exposureTextLabel.textColor = [UIColor whiteColor];
     exposureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -235,18 +235,18 @@
     
     // white balance
     
-    UIImageView *wbIcon = [[UIImageView alloc] initWithFrame:CGRectMake(209, 508, 25, 25)];
+    UIImageView *wbIcon = [[UIImageView alloc] initWithFrame:CGRectMake(209, 505, 25, 25)];
     wbIcon.image = [UIImage imageNamed:@"white-balance.png"];
     [self.view addSubview:wbIcon];
     
-    UILabel *wbLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 500, 100, 30)];
+    UILabel *wbLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 497, 100, 30)];
     wbLabel.text = @"White Balance";
     wbLabel.textColor = [UIColor whiteColor];
     wbLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
     wbLabel.numberOfLines = 1;
     [self.view addSubview:wbLabel];
     
-    UILabel *wbTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 513, 100, 30)];
+    UILabel *wbTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 510, 100, 30)];
     wbTextLabel.text = @"Auto";
     wbTextLabel.textColor = [UIColor whiteColor];
     wbTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
@@ -343,24 +343,20 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    NSLog(@"scroll view end");
     
     if (scrollView.tag == 0x001000)
     {
-        NSLog(@"滚动停止了...");
         CGFloat pageWidth = scrollView.frame.size.width;
         int index = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1;
-        NSLog(@"当前所索为：%d", index);
+        NSLog(@"The current index is：%d", index);
         
-        /*
-        //改变UIPageControl的当前所索
+        // change UIPageControl
         UIPageControl *pageControl = (UIPageControl*)[self.view viewWithTag:0x001100];
         if (pageControl)
         {
             pageControl.currentPage = index;//设置当前点的所索
             [pageControl updateCurrentPageDisplay];//刷新当前点
         }
-         */
     }
 }
 
