@@ -29,6 +29,7 @@
     
     // the scroll view pictures
     UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(5, 68, 310, 310)];
+    UIPageControl *photoPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 380, 100, 20)];
     
     UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 310, 310)];
     photo1.image = [UIImage imageNamed:@"01.jpg"];
@@ -53,18 +54,24 @@
     UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1550, 0, 310, 310)];
     photo6.image = [UIImage imageNamed:@"06.jpg"];
     [photoScrollView addSubview:photo6];
-
     
     [self.view addSubview:photoScrollView];
     
     photoScrollView.contentSize = CGSizeMake(310 * 6, 310);
     NSLog(@"width: %f, height: %f", self.view.frame.size.width, self.view.frame.size.height);
     
+    photoScrollView.tag = 0x001000;
     photoScrollView.showsHorizontalScrollIndicator = YES;
     photoScrollView.showsVerticalScrollIndicator = NO;
     photoScrollView.pagingEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
  
+    photoPageControl.currentPage = 1;
+    photoPageControl.numberOfPages = 6;
+    photoPageControl.hidesForSinglePage = YES;
+    
+    [self.view addSubview:photoPageControl];
+    
     // camera picture (static)
     UIImageView *cameraIcon = [[UIImageView alloc] initWithFrame:CGRectMake(15, 390, 80, 80)];
     NSString *str1 = [NSString stringWithFormat:@"camera-icon.png"];
@@ -266,6 +273,30 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"scroll view end");
+    
+    if (scrollView.tag == 0x001000)
+    {
+        NSLog(@"滚动停止了...");
+        CGFloat pageWidth = scrollView.frame.size.width;
+        int index = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1;
+        NSLog(@"当前所索为：%d", index);
+        
+        /*
+        //改变UIPageControl的当前所索
+        UIPageControl *pageControl = (UIPageControl*)[self viewWithTag:0x001100];
+        if (pageControl)
+        {
+            pageControl.currentPage = index;//设置当前点的所索
+            [pageControl updateCurrentPageDisplay];//刷新当前点
+        }
+         */
+    }
 }
 
 /*
