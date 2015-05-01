@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "TakeViewController.h"
+#import <ImageIO/ImageIO.h>
 
 #define colorwithrgb(x,y,z,alp) [UIColor colorWithRed:(x)/255.0 green:(y)/255.0 blue:(z)/255.0 alpha:(alp)]
 
@@ -53,6 +54,9 @@
     
     UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1550, 0, 310, 310)];
     photo6.image = [UIImage imageNamed:@"06.jpg"];
+    
+    photoScrollView.delegate =self;
+    
     [photoScrollView addSubview:photo6];
     
     [self.view addSubview:photoScrollView];
@@ -69,6 +73,8 @@
     photoPageControl.currentPage = 1;
     photoPageControl.numberOfPages = 6;
     photoPageControl.hidesForSinglePage = YES;
+    
+    photoPageControl.tag = 0x001100;
     
     [self.view addSubview:photoPageControl];
     
@@ -260,6 +266,65 @@
     photoLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
     photoLab.textColor = [UIColor whiteColor];
     [self.view addSubview:photoLab];
+    
+    // Try test the EXIF data
+    int i = 0;
+    for (i = 1;i <= 6;i++){
+        [self printEXIF:i];
+    }
+}
+
+- (void)printEXIF:(int)num
+{
+    NSLog(@"Print EXIF %d", num);
+    
+    /* The following is a section of sample code of reading
+     EXIF data from a JPEG image file
+     */
+    
+    NSString *strFromInt = [NSString stringWithFormat:@"%02d", num];
+    
+    NSURL *imageFileURL = [[NSBundle mainBundle]
+                           URLForResource: strFromInt withExtension:@"jpg"];
+    
+    CGImageSourceRef imageSource = CGImageSourceCreateWithURL((CFURLRef)imageFileURL, NULL);
+    
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithBool:NO], (NSString *)kCGImageSourceShouldCache,
+                             nil];
+    
+    CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (CFDictionaryRef)options);
+    if (imageProperties) {
+        NSNumber *width = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
+        NSNumber *height = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelHeight);
+        NSLog(@"Image dimensions: %@ x %@ px", width, height);
+    }
+    
+    CFDictionaryRef exif = CFDictionaryGetValue(imageProperties, kCGImagePropertyExifDictionary);
+    if (exif) {
+        NSLog(@"--------------------------------");
+        NSLog(@"Printing more EXIF meta info for this picture");
+        
+        NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
+        NSLog(@"Date Taken: %@", dateTakenString);
+        
+        NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
+        NSLog(@"Exposure Time: %@", Exposure);
+        NSNumber *IsoSpeed = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifISOSpeed);
+        NSLog(@"ISO Speed: %@", IsoSpeed);
+        NSNumber *Aperture = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifFNumber);
+        NSLog(@"Aperture: %@", Aperture);
+        NSString *LensModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifLensModel);
+        
+        NSLog(@"--------------------------------");
+    }
+    
+    CFRelease(imageProperties);
+    CFRelease(imageSource);
+    
+    /*
+     END of the sample code
+     */
 }
 
 - (void)nextVC
@@ -289,7 +354,7 @@
         
         /*
         //改变UIPageControl的当前所索
-        UIPageControl *pageControl = (UIPageControl*)[self viewWithTag:0x001100];
+        UIPageControl *pageControl = (UIPageControl*)[self.view viewWithTag:0x001100];
         if (pageControl)
         {
             pageControl.currentPage = index;//设置当前点的所索
