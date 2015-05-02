@@ -64,7 +64,7 @@
     NSLog(@"width: %f, height: %f", self.view.frame.size.width, self.view.frame.size.height);
     
     photoScrollView.tag = 0x001000;
-    photoScrollView.showsHorizontalScrollIndicator = YES;
+    photoScrollView.showsHorizontalScrollIndicator = NO;
     photoScrollView.showsVerticalScrollIndicator = NO;
     photoScrollView.pagingEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -344,7 +344,7 @@
         NSLog(@"--------------------------------");
         NSLog(@"Printing more EXIF meta info for this picture");
         
-        NSString *CameraModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyMakerCanonOwnerName);
+        NSString *CameraModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifImageUniqueID);
         NSLog(@"Camera Model: %@", CameraModel);
         UILabel *cameraTextLabel = (UILabel*)[self.view viewWithTag:0x10010001];
         cameraTextLabel.text = CameraModel;
