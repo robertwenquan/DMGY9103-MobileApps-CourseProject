@@ -264,18 +264,20 @@
 
     // This is the snap a photo button
 
-    UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    photoBtn.frame = CGRectMake(20, self.view.frame.size.height-35, 30, 30);
-    [photoBtn setBackgroundImage:[UIImage imageNamed:@"camera-snap"] forState:UIControlStateNormal];
-    [photoBtn addTarget:self action:@selector(nextVC) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:photoBtn];
-    
-    UILabel *photoLab = [[UILabel alloc]initWithFrame:CGRectMake(photoBtn.frame.origin.x+photoBtn.frame.size.width+5, self.view.frame.size.height-35, 300, 30)];
-    photoLab.text = @"Re-take with above shooting parameters";
+    UILabel *photoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-30, 320, 30)];
+    photoLab.text = @"           Re-take with above shooting parameters";
     photoLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
     photoLab.textColor = [UIColor whiteColor];
+    photoLab.textAlignment = NSTextAlignmentCenter;
+    photoLab.backgroundColor = [UIColor blackColor];
     [self.view addSubview:photoLab];
     
+    UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    photoBtn.frame = CGRectMake(20, self.view.frame.size.height-30, 30, 30);
+    [photoBtn setBackgroundImage:[UIImage imageNamed:@"camera-snap"] forState:UIControlStateNormal];
+    [photoBtn addTarget:self action:@selector(nextVC) forControlEvents:UIControlEventTouchUpInside];
+    photoBtn.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:photoBtn];
 }
 
 /*
