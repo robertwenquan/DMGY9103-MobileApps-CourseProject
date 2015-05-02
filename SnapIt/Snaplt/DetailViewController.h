@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import Foundation;
 
 @interface DetailViewController : UIViewController <UIScrollViewDelegate>
 

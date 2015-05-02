@@ -97,6 +97,7 @@
     cameraTextLabel.textColor = [UIColor whiteColor];
     cameraTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     cameraTextLabel.numberOfLines = 1;
+    cameraTextLabel.tag = 0x10010001;
     [self.view addSubview:cameraTextLabel];
     
     // lens info
@@ -106,6 +107,7 @@
     lensTextLabel.textColor = [UIColor whiteColor];
     lensTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     lensTextLabel.numberOfLines = 1;
+    lensTextLabel.tag = 0x10010002;
     [self.view addSubview:lensTextLabel];
     
     // shoot date info
@@ -152,6 +154,7 @@
     apertureTextLabel.textColor = [UIColor whiteColor];
     apertureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     apertureTextLabel.numberOfLines = 1;
+    apertureTextLabel.tag = 0x10010004;
     [self.view addSubview:apertureTextLabel];
     
     // shutter speed
@@ -172,6 +175,7 @@
     shutterTextLabel.textColor = [UIColor whiteColor];
     shutterTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     shutterTextLabel.numberOfLines = 1;
+    shutterTextLabel.tag = 0x10010005;
     [self.view addSubview:shutterTextLabel];
     
     // ISO speed
@@ -192,6 +196,7 @@
     iosTextLabel.textColor = [UIColor whiteColor];
     iosTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     iosTextLabel.numberOfLines = 1;
+    iosTextLabel.tag = 0x10010006;
     [self.view addSubview:iosTextLabel];
     
     // focal length
@@ -212,6 +217,7 @@
     focalTextLabel.textColor = [UIColor whiteColor];
     focalTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     focalTextLabel.numberOfLines = 1;
+    focalTextLabel.tag = 0x10010007;
     [self.view addSubview:focalTextLabel];
     
     // exposure compensation
@@ -232,6 +238,7 @@
     exposureTextLabel.textColor = [UIColor whiteColor];
     exposureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     exposureTextLabel.numberOfLines = 1;
+    exposureTextLabel.tag = 0x10010008;
     [self.view addSubview:exposureTextLabel];
     
     // white balance
@@ -252,6 +259,7 @@
     wbTextLabel.textColor = [UIColor whiteColor];
     wbTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     wbTextLabel.numberOfLines = 1;
+    wbTextLabel.tag = 0x10010009;
     [self.view addSubview:wbTextLabel];
 
     // This is the snap a photo button
@@ -272,6 +280,7 @@
 
 - (void)printEXIF:(int)num
 {
+    num = num + 1;
     NSLog(@"Print EXIF %d", num);
     
     /* The following is a section of sample code of reading
@@ -303,9 +312,13 @@
         
         NSString *CameraModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyMakerCanonOwnerName);
         NSLog(@"Camera Model: %@", CameraModel);
+        UILabel *cameraTextLabel = [self.view viewWithTag:0x10010001];
+        cameraTextLabel.text = CameraModel;
         
         NSString *LensModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifLensModel);
         NSLog(@"Lens Model: %@", LensModel);
+        UILabel *lensTextLabel = [self.view viewWithTag:0x10010002];
+        lensTextLabel.text = LensModel;
         
         NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
         NSLog(@"Date Taken: %@", dateTakenString);
@@ -314,21 +327,47 @@
         
         NSNumber *Aperture = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifFNumber);
         NSLog(@"Aperture: F%@", Aperture);
+        UILabel *apertureTextLabel = [self.view viewWithTag:0x10010004];
+        apertureTextLabel.text = [NSString stringWithFormat:@"F%@", Aperture];
         
         NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
         NSLog(@"Exposure Time: 1/%.0fs", round(1.0 / [Exposure floatValue]));
+        UILabel *exposureTextLabel = [self.view viewWithTag:0x10010005];
+        exposureTextLabel.text = [NSString stringWithFormat:@"1/%.0fs", round(1.0 / [Exposure floatValue])];
         
         NSNumber *IsoSpeed = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifISOSpeedRatings);
         NSLog(@"ISO Speed: %@", IsoSpeed);
+        UILabel *isoTextLabel = [self.view viewWithTag:0x10010006];
+        
+        /*
+        NSArray *lines = [IsoSpeed componentsSeparatedByString:@"\n"];
+        NSString *secondline = [lines objectAtIndex:1];
+        
+        isoTextLabel.text = secondline;
+         */
+        
+        NSString *abc = [NSString stringWithFormat:@"%@", IsoSpeed];
+        NSArray *lines = [abc componentsSeparatedByString:@"\n"];
+        NSString *secondline = [lines objectAtIndex:1];
+        NSLog(@"xxxx %@", secondline);
+        
+        
+        isoTextLabel.text = secondline;
         
         NSString *FocalLength = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifFocalLength);
         NSLog(@"Focal Length: %@mm", FocalLength);
+        UILabel *focalTextLabel = [self.view viewWithTag:0x10010007];
+        focalTextLabel.text = [NSString stringWithFormat:@"%@mm", FocalLength];
         
         NSNumber *ExposureBias = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureBiasValue);
         NSLog(@"Exposure Bias: %+.2f EV", [ExposureBias floatValue]);
+        UILabel *exposurebiasTextLabel = [self.view viewWithTag:0x10010008];
+        exposurebiasTextLabel.text = [NSString stringWithFormat:@"%+.2f EV", [ExposureBias floatValue]];
         
         NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
         NSLog(@"White Balance: %@", WhiteBalance);
+        UILabel *wbTextLabel = [self.view viewWithTag:0x10010009];
+        //wbTextLabel.text = WhiteBalance;
         
         NSLog(@"--------------------------------");
     }
