@@ -278,11 +278,44 @@
     
 }
 
+/*
+ 
+ def floatToString(n):
+ if n < 0:
+ sign = -1
+ else:
+ sign = 1
+ 
+ n *= sign
+ 
+ intpart = int(floor(n))
+ fltpart = n - intpart
+ 
+ if intpart == 0 and fltpart == 0:
+ return '0'
+ else:
+ if sign == 1:
+ ret = '+'
+ else:
+ ret = '-'
+ 
+ if intpart != 0:
+ ret += str(intpart) + ' '
+ 
+ if fltpart > 0.6:
+ ret += '2/3'
+ elif fltpart > 0.3:
+ ret += '1/3'
+ 
+ return ret
+ 
+ */
+
 - (void)printEXIF:(int)num
 {
     num = num + 1;
     NSLog(@"Print EXIF %d", num);
-    
+ 
     /* The following is a section of sample code of reading
      EXIF data from a JPEG image file
      */
@@ -307,6 +340,7 @@
     
     CFDictionaryRef exif = CFDictionaryGetValue(imageProperties, kCGImagePropertyExifDictionary);
     if (exif) {
+        
         NSLog(@"--------------------------------");
         NSLog(@"Printing more EXIF meta info for this picture");
         
@@ -342,7 +376,8 @@
         NSString *abc = [NSString stringWithFormat:@"%@", IsoSpeed];
         NSArray *lines = [abc componentsSeparatedByString:@"\n"];
         NSString *secondline = [lines objectAtIndex:1];
-        isoTextLabel.text = secondline;
+        NSString *trimmedString = [secondline stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        isoTextLabel.text = trimmedString;
         
         NSString *FocalLength = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifFocalLength);
         NSLog(@"Focal Length: %@mm", FocalLength);
