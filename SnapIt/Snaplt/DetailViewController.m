@@ -29,29 +29,29 @@
     // Create a paged scroll view controller here to show four pictures
     
     // the scroll view pictures
-    UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(5, 68, 310, 310)];
+    UIScrollView *photoScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
     
-    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 310, 310)];
+    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
     photo1.image = [UIImage imageNamed:@"01.jpg"];
     [photoScrollView addSubview:photo1];
     
-    UIImageView *photo2 = [[UIImageView alloc] initWithFrame:CGRectMake(310, 0, 310, 310)];
+    UIImageView *photo2 = [[UIImageView alloc] initWithFrame:CGRectMake(320, 0, 320, 320)];
     photo2.image = [UIImage imageNamed:@"02.jpg"];
     [photoScrollView addSubview:photo2];
     
-    UIImageView *photo3 = [[UIImageView alloc] initWithFrame:CGRectMake(620, 0, 310, 310)];
+    UIImageView *photo3 = [[UIImageView alloc] initWithFrame:CGRectMake(640, 0, 320, 320)];
     photo3.image = [UIImage imageNamed:@"03.jpg"];
     [photoScrollView addSubview:photo3];
     
-    UIImageView *photo4 = [[UIImageView alloc] initWithFrame:CGRectMake(930, 0, 310, 310)];
+    UIImageView *photo4 = [[UIImageView alloc] initWithFrame:CGRectMake(960, 0, 320, 320)];
     photo4.image = [UIImage imageNamed:@"04.jpg"];
     [photoScrollView addSubview:photo4];
     
-    UIImageView *photo5 = [[UIImageView alloc] initWithFrame:CGRectMake(1240, 0, 310, 310)];
+    UIImageView *photo5 = [[UIImageView alloc] initWithFrame:CGRectMake(1280, 0, 320, 320)];
     photo5.image = [UIImage imageNamed:@"05.jpg"];
     [photoScrollView addSubview:photo5];
     
-    UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1550, 0, 310, 310)];
+    UIImageView *photo6 = [[UIImageView alloc] initWithFrame:CGRectMake(1600, 0, 320, 320)];
     photo6.image = [UIImage imageNamed:@"06.jpg"];
     
     photoScrollView.delegate =self;
@@ -60,7 +60,7 @@
     
     [self.view addSubview:photoScrollView];
     
-    photoScrollView.contentSize = CGSizeMake(310 * 6, 310);
+    photoScrollView.contentSize = CGSizeMake(320 * 6, 320);
     NSLog(@"width: %f, height: %f", self.view.frame.size.width, self.view.frame.size.height);
     
     photoScrollView.tag = 0x001000;
@@ -70,7 +70,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
  
     /* page controll */
-    UIPageControl *photoPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(120, 380, 100, 20)];
+    UIPageControl *photoPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(100, 382, 120, 20)];
     photoPageControl.currentPage = 1;
     photoPageControl.numberOfPages = 6;
     photoPageControl.hidesForSinglePage = YES;
@@ -88,14 +88,14 @@
     UILabel *cameraLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 395, 200, 30)];
     cameraLabel.text = @"CAMERA AND LENS";
     cameraLabel.textColor = [UIColor whiteColor];
-    cameraLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    cameraLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:11];
     cameraLabel.numberOfLines = 1;
     [self.view addSubview:cameraLabel];
     
     UILabel *cameraTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 408, 200, 30)];
     cameraTextLabel.text = @"CANON EOS 6D";
     cameraTextLabel.textColor = [UIColor whiteColor];
-    cameraTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    cameraTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     cameraTextLabel.numberOfLines = 1;
     cameraTextLabel.tag = 0x10010001;
     [self.view addSubview:cameraTextLabel];
@@ -105,7 +105,7 @@
     UILabel *lensTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 421, 200, 30)];
     lensTextLabel.text = @"EF 24-70 F/2.8L II USM";
     lensTextLabel.textColor = [UIColor whiteColor];
-    lensTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    lensTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     lensTextLabel.numberOfLines = 1;
     lensTextLabel.tag = 0x10010002;
     [self.view addSubview:lensTextLabel];
@@ -114,14 +114,14 @@
     UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 436, 100, 30)];
     dateLabel.text = @"DATE";
     dateLabel.textColor = [UIColor whiteColor];
-    dateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    dateLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:11];
     dateLabel.numberOfLines = 1;
     [self.view addSubview:dateLabel];
     
     UILabel *dateTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 449, 200, 30)];
     dateTextLabel.text = @"2015/03/28 16:33:25";
     dateTextLabel.textColor = [UIColor whiteColor];
-    dateTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    dateTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     dateTextLabel.numberOfLines = 1;
     dateTextLabel.tag = 0x10010003;
     [self.view addSubview:dateTextLabel];
@@ -145,14 +145,14 @@
     UILabel *apertureLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 470, 100, 30)];
     apertureLabel.text = @"APERTURE";
     apertureLabel.textColor = [UIColor whiteColor];
-    apertureLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    apertureLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     apertureLabel.numberOfLines = 1;
     [self.view addSubview:apertureLabel];
     
     UILabel *apertureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 483, 100, 30)];
     apertureTextLabel.text = @"F11";
     apertureTextLabel.textColor = [UIColor whiteColor];
-    apertureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    apertureTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     apertureTextLabel.numberOfLines = 1;
     apertureTextLabel.tag = 0x10010004;
     [self.view addSubview:apertureTextLabel];
@@ -164,16 +164,16 @@
     [self.view addSubview:shutterIcon];
     
     UILabel *shutterLabel = [[UILabel alloc]initWithFrame:CGRectMake(134, 470, 100, 30)];
-    shutterLabel.text = @"Shutter";
+    shutterLabel.text = @"SHUTTER";
     shutterLabel.textColor = [UIColor whiteColor];
-    shutterLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    shutterLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     shutterLabel.numberOfLines = 1;
     [self.view addSubview:shutterLabel];
     
     UILabel *shutterTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 483, 100, 30)];
     shutterTextLabel.text = @"1/200";
     shutterTextLabel.textColor = [UIColor whiteColor];
-    shutterTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    shutterTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     shutterTextLabel.numberOfLines = 1;
     shutterTextLabel.tag = 0x10010005;
     [self.view addSubview:shutterTextLabel];
@@ -187,14 +187,14 @@
     UILabel *iosLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 470, 100, 30)];
     iosLabel.text = @"ISO";
     iosLabel.textColor = [UIColor whiteColor];
-    iosLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    iosLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     iosLabel.numberOfLines = 1;
     [self.view addSubview:iosLabel];
     
     UILabel *iosTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 483, 100, 30)];
     iosTextLabel.text = @"100";
     iosTextLabel.textColor = [UIColor whiteColor];
-    iosTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    iosTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     iosTextLabel.numberOfLines = 1;
     iosTextLabel.tag = 0x10010006;
     [self.view addSubview:iosTextLabel];
@@ -206,16 +206,16 @@
     [self.view addSubview:focalIcon];
     
     UILabel *focalLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 497, 100, 30)];
-    focalLabel.text = @"Focal Length";
+    focalLabel.text = @"FOCAL LENGTH";
     focalLabel.textColor = [UIColor whiteColor];
-    focalLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    focalLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     focalLabel.numberOfLines = 1;
     [self.view addSubview:focalLabel];
     
     UILabel *focalTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(30, 510, 100, 30)];
     focalTextLabel.text = @"70mm";
     focalTextLabel.textColor = [UIColor whiteColor];
-    focalTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    focalTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     focalTextLabel.numberOfLines = 1;
     focalTextLabel.tag = 0x10010007;
     [self.view addSubview:focalTextLabel];
@@ -227,16 +227,16 @@
     [self.view addSubview:exposureIcon];
     
     UILabel *exposureLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 497, 100, 30)];
-    exposureLabel.text = @"Exposure +/-";
+    exposureLabel.text = @"EXPOSURE +/-";
     exposureLabel.textColor = [UIColor whiteColor];
-    exposureLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    exposureLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     exposureLabel.numberOfLines = 1;
     [self.view addSubview:exposureLabel];
     
     UILabel *exposureTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(133, 510, 100, 30)];
     exposureTextLabel.text = @"-1/3 EV";
     exposureTextLabel.textColor = [UIColor whiteColor];
-    exposureTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    exposureTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     exposureTextLabel.numberOfLines = 1;
     exposureTextLabel.tag = 0x10010008;
     [self.view addSubview:exposureTextLabel];
@@ -248,23 +248,23 @@
     [self.view addSubview:wbIcon];
     
     UILabel *wbLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 497, 100, 30)];
-    wbLabel.text = @"White Balance";
+    wbLabel.text = @"WHITE BALANCE";
     wbLabel.textColor = [UIColor whiteColor];
-    wbLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
+    wbLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
     wbLabel.numberOfLines = 1;
     [self.view addSubview:wbLabel];
     
     UILabel *wbTextLabel = [[UILabel alloc]initWithFrame:CGRectMake(236, 510, 100, 30)];
     wbTextLabel.text = @"Auto";
     wbTextLabel.textColor = [UIColor whiteColor];
-    wbTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
+    wbTextLabel.font = [UIFont fontWithName:@"Arial" size:10];
     wbTextLabel.numberOfLines = 1;
     wbTextLabel.tag = 0x10010009;
     [self.view addSubview:wbTextLabel];
 
     // This is the snap a photo button
 
-    UILabel *photoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-30, 320, 30)];
+    UILabel *photoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-35, 320, 35)];
     photoLab.text = @"           Re-take with above shooting parameters";
     photoLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
     photoLab.textColor = [UIColor whiteColor];
@@ -273,11 +273,14 @@
     [self.view addSubview:photoLab];
     
     UIButton *photoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    photoBtn.frame = CGRectMake(20, self.view.frame.size.height-30, 30, 30);
+    photoBtn.frame = CGRectMake(15, self.view.frame.size.height-35, 35, 35);
     [photoBtn setBackgroundImage:[UIImage imageNamed:@"camera-snap"] forState:UIControlStateNormal];
     [photoBtn addTarget:self action:@selector(nextVC) forControlEvents:UIControlEventTouchUpInside];
     photoBtn.backgroundColor = [UIColor blackColor];
     [self.view addSubview:photoBtn];
+    
+    // Update the photo info for the first picture
+    [self updatePhotoInfo:0];
 }
 
 /*
@@ -368,7 +371,7 @@
  
  */
 
-- (void)printEXIF:(int)num
+- (void)updatePhotoInfo:(int)num
 {
     num = num + 1;
     NSLog(@"Print EXIF %d", num);
@@ -463,11 +466,6 @@
      */
 }
 
-- (void)updatePhotoInfo:(int)index
-{
-    NSLog(@"Update photo info for photo %02d", index);
-}
-
 - (void)nextVC
 {
     NSLog(@"Enter nextVC");
@@ -499,7 +497,6 @@
         }
         
         // update photo exif info
-        [self printEXIF:index];
         [self updatePhotoInfo:index];
     }
 }
