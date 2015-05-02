@@ -121,6 +121,7 @@
     dateTextLabel.textColor = [UIColor whiteColor];
     dateTextLabel.font = [UIFont fontWithName:@"Arial" size:11];
     dateTextLabel.numberOfLines = 1;
+    dateTextLabel.tag = 0x10010003;
     [self.view addSubview:dateTextLabel];
     
     
@@ -267,11 +268,6 @@
     photoLab.textColor = [UIColor whiteColor];
     [self.view addSubview:photoLab];
     
-    // Try test the EXIF data
-    int i = 0;
-    for (i = 1;i <= 6;i++){
-        [self printEXIF:i];
-    }
 }
 
 - (void)printEXIF:(int)num
@@ -305,16 +301,34 @@
         NSLog(@"--------------------------------");
         NSLog(@"Printing more EXIF meta info for this picture");
         
+        NSString *CameraModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyMakerCanonOwnerName);
+        NSLog(@"Camera Model: %@", CameraModel);
+        
+        NSString *LensModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifLensModel);
+        NSLog(@"Lens Model: %@", LensModel);
+        
         NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
         NSLog(@"Date Taken: %@", dateTakenString);
+        UILabel *dateTextLabel = [self.view viewWithTag:0x10010003];
+        dateTextLabel.text = dateTakenString;
+        
+        NSNumber *Aperture = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifFNumber);
+        NSLog(@"Aperture: F%@", Aperture);
         
         NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
-        NSLog(@"Exposure Time: %@", Exposure);
-        NSNumber *IsoSpeed = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifISOSpeed);
+        NSLog(@"Exposure Time: 1/%.0fs", round(1.0 / [Exposure floatValue]));
+        
+        NSNumber *IsoSpeed = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifISOSpeedRatings);
         NSLog(@"ISO Speed: %@", IsoSpeed);
-        NSNumber *Aperture = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifFNumber);
-        NSLog(@"Aperture: %@", Aperture);
-        NSString *LensModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifLensModel);
+        
+        NSString *FocalLength = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifFocalLength);
+        NSLog(@"Focal Length: %@mm", FocalLength);
+        
+        NSNumber *ExposureBias = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureBiasValue);
+        NSLog(@"Exposure Bias: %+.2f EV", [ExposureBias floatValue]);
+        
+        NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
+        NSLog(@"White Balance: %@", WhiteBalance);
         
         NSLog(@"--------------------------------");
     }
@@ -325,6 +339,11 @@
     /*
      END of the sample code
      */
+}
+
+- (void)updatePhotoInfo:(int)index
+{
+    NSLog(@"Update photo info for photo %02d", index);
 }
 
 - (void)nextVC
@@ -343,7 +362,6 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    
     if (scrollView.tag == 0x001000)
     {
         CGFloat pageWidth = scrollView.frame.size.width;
@@ -354,9 +372,13 @@
         UIPageControl *pageControl = (UIPageControl*)[self.view viewWithTag:0x001100];
         if (pageControl)
         {
-            pageControl.currentPage = index;//设置当前点的所索
-            [pageControl updateCurrentPageDisplay];//刷新当前点
+            pageControl.currentPage = index;
+            [pageControl updateCurrentPageDisplay];
         }
+        
+        // update photo exif info
+        [self printEXIF:index];
+        [self updatePhotoInfo:index];
     }
 }
 
