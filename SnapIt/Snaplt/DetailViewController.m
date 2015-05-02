@@ -312,61 +312,51 @@
         
         NSString *CameraModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyMakerCanonOwnerName);
         NSLog(@"Camera Model: %@", CameraModel);
-        UILabel *cameraTextLabel = [self.view viewWithTag:0x10010001];
+        UILabel *cameraTextLabel = (UILabel*)[self.view viewWithTag:0x10010001];
         cameraTextLabel.text = CameraModel;
         
         NSString *LensModel = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifLensModel);
         NSLog(@"Lens Model: %@", LensModel);
-        UILabel *lensTextLabel = [self.view viewWithTag:0x10010002];
+        UILabel *lensTextLabel = (UILabel*)[self.view viewWithTag:0x10010002];
         lensTextLabel.text = LensModel;
         
         NSString *dateTakenString = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifDateTimeOriginal);
         NSLog(@"Date Taken: %@", dateTakenString);
-        UILabel *dateTextLabel = [self.view viewWithTag:0x10010003];
+        UILabel *dateTextLabel = (UILabel*)[self.view viewWithTag:0x10010003];
         dateTextLabel.text = dateTakenString;
         
         NSNumber *Aperture = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifFNumber);
         NSLog(@"Aperture: F%@", Aperture);
-        UILabel *apertureTextLabel = [self.view viewWithTag:0x10010004];
+        UILabel *apertureTextLabel = (UILabel*)[self.view viewWithTag:0x10010004];
         apertureTextLabel.text = [NSString stringWithFormat:@"F%@", Aperture];
         
         NSNumber *Exposure = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureTime);
         NSLog(@"Exposure Time: 1/%.0fs", round(1.0 / [Exposure floatValue]));
-        UILabel *exposureTextLabel = [self.view viewWithTag:0x10010005];
+        UILabel *exposureTextLabel = (UILabel*)[self.view viewWithTag:0x10010005];
         exposureTextLabel.text = [NSString stringWithFormat:@"1/%.0fs", round(1.0 / [Exposure floatValue])];
         
         NSNumber *IsoSpeed = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifISOSpeedRatings);
         NSLog(@"ISO Speed: %@", IsoSpeed);
-        UILabel *isoTextLabel = [self.view viewWithTag:0x10010006];
-        
-        /*
-        NSArray *lines = [IsoSpeed componentsSeparatedByString:@"\n"];
-        NSString *secondline = [lines objectAtIndex:1];
-        
-        isoTextLabel.text = secondline;
-         */
+        UILabel *isoTextLabel = (UILabel*)[self.view viewWithTag:0x10010006];
         
         NSString *abc = [NSString stringWithFormat:@"%@", IsoSpeed];
         NSArray *lines = [abc componentsSeparatedByString:@"\n"];
         NSString *secondline = [lines objectAtIndex:1];
-        NSLog(@"xxxx %@", secondline);
-        
-        
         isoTextLabel.text = secondline;
         
         NSString *FocalLength = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifFocalLength);
         NSLog(@"Focal Length: %@mm", FocalLength);
-        UILabel *focalTextLabel = [self.view viewWithTag:0x10010007];
+        UILabel *focalTextLabel = (UILabel*)[self.view viewWithTag:0x10010007];
         focalTextLabel.text = [NSString stringWithFormat:@"%@mm", FocalLength];
         
         NSNumber *ExposureBias = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureBiasValue);
         NSLog(@"Exposure Bias: %+.2f EV", [ExposureBias floatValue]);
-        UILabel *exposurebiasTextLabel = [self.view viewWithTag:0x10010008];
+        UILabel *exposurebiasTextLabel = (UILabel*)[self.view viewWithTag:0x10010008];
         exposurebiasTextLabel.text = [NSString stringWithFormat:@"%+.2f EV", [ExposureBias floatValue]];
         
         NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
         NSLog(@"White Balance: %@", WhiteBalance);
-        UILabel *wbTextLabel = [self.view viewWithTag:0x10010009];
+        UILabel *wbTextLabel = (UILabel*)[self.view viewWithTag:0x10010009];
         //wbTextLabel.text = WhiteBalance;
         
         NSLog(@"--------------------------------");
