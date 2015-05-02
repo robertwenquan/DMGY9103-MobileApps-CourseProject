@@ -10,7 +10,7 @@ def floatToString(n):
     
     n *= sign
 
-    intpart = floor(n)
+    intpart = int(floor(n))
     fltpart = n - intpart
 
     if intpart == 0 and fltpart == 0:
@@ -22,7 +22,7 @@ def floatToString(n):
             ret = '-'
 
     if intpart != 0:
-        ret += str(intpart)
+        ret += str(intpart) + ' '
       
     if fltpart > 0.6:
         ret += '2/3'
@@ -33,6 +33,10 @@ def floatToString(n):
 
 print floatToString(0.3333333333)
 print floatToString(0.6666666666)
+print floatToString(1)
+print floatToString(1.333333333333)
+print floatToString(1.666666666667)
+print floatToString(2)
 print floatToString(0)
 print floatToString(-0.3333333333)
 print floatToString(-1.3333333333)
