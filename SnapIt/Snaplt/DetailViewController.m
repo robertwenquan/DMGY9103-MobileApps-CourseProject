@@ -281,6 +281,61 @@
 }
 
 /*
+ convertExposureBias
+ 
+ INPUT: exposureBias in float number
+ OUTPUT: exposureBias in string format
+ 
+ INPUT numbers are in 0.3 step, like -1.33333333, -1, -0.6666666667, 0, 
+       0.3333333333, 2.333333333333, 1.66666666667, 2, etc
+       range is normally between -5 and 5.
+ OUTPUT format is desired to be like -1 1/3 EV, -1 EV, +1/3 EV, + 2 2/3 EV, etc.
+       when this is no bias, 0 is the output, with the trailing EV.
+ 
+ */
+- (NSString *)convertExposureBias:(float)exposureBias
+{
+    int sign = 0;
+    float exp = exposureBias;
+    NSString *exposureString = [[NSString alloc] init];
+    
+    if (exposureBias < 0) {
+        sign = -1;
+    }
+    else {
+        sign = 1;
+    }
+    
+    exp *= sign;
+    
+    int intpart = (int)floor(exp);
+    float fltpart = exp - intpart;
+    
+    if (intpart == 0 && fltpart == 0) {
+        exposureString = @"0";
+    }
+    else if (sign == 1) {
+        exposureString = @"+";
+    } else {
+        exposureString = @"-";
+    }
+    
+    if (intpart != 0) {
+        exposureString = [NSString stringWithFormat:@"%@%d ", exposureString, intpart];
+    }
+    
+    if (fltpart > 0.6) {
+        exposureString = [NSString stringWithFormat:@"%@%@", exposureString, @"2/3 EV"];
+    } else if (fltpart > 0.3) {
+        exposureString = [NSString stringWithFormat:@"%@%@", exposureString, @"1/3 EV"];
+    } else {
+        exposureString = [NSString stringWithFormat:@"%@%@", exposureString, @" EV"];
+    }
+    
+    return exposureString;
+}
+
+/*
  
  def floatToString(n):
  if n < 0:
@@ -387,9 +442,10 @@
         focalTextLabel.text = [NSString stringWithFormat:@"%@mm", FocalLength];
         
         NSNumber *ExposureBias = (NSNumber *)CFDictionaryGetValue(exif, kCGImagePropertyExifExposureBiasValue);
-        NSLog(@"Exposure Bias: %+.2f EV", [ExposureBias floatValue]);
+        NSString *ExposureBiasString = [self convertExposureBias:[ExposureBias floatValue]];
+        NSLog(@"Exposure Bias: %@", ExposureBiasString);
         UILabel *exposurebiasTextLabel = (UILabel*)[self.view viewWithTag:0x10010008];
-        exposurebiasTextLabel.text = [NSString stringWithFormat:@"%+.2f EV", [ExposureBias floatValue]];
+        exposurebiasTextLabel.text = ExposureBiasString;
         
         NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
         NSLog(@"White Balance: %@", WhiteBalance);
