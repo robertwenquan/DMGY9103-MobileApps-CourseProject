@@ -450,20 +450,16 @@
         UILabel *exposurebiasTextLabel = (UILabel*)[self.view viewWithTag:0x10010008];
         exposurebiasTextLabel.text = ExposureBiasString;
         
-        NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
-        NSLog(@"White Balance: %@", WhiteBalance);
-        UILabel *wbTextLabel = (UILabel*)[self.view viewWithTag:0x10010009];
+        //NSString *WhiteBalance = (NSString *)CFDictionaryGetValue(exif, kCGImagePropertyExifWhiteBalance);
+        //NSLog(@"White Balance: %@", WhiteBalance);
+        //UILabel *wbTextLabel = (UILabel*)[self.view viewWithTag:0x10010009];
         //wbTextLabel.text = WhiteBalance;
-        
+
         NSLog(@"--------------------------------");
     }
     
     CFRelease(imageProperties);
     CFRelease(imageSource);
-    
-    /*
-     END of the sample code
-     */
 }
 
 - (void)nextVC
