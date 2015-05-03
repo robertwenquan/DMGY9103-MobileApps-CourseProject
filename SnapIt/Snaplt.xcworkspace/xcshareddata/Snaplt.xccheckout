@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>181E74AC-A836-457F-AE2A-D02FF15ECC57</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Snaplt</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
+		<string>github.com:robertwenquan/DMGY9103-MobileApps-CourseProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SnapIt/Snaplt.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E6B8417CB04EF87E151FE50D5390D98892F61EAD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:robertwenquan/DMGY9103-MobileApps-CourseProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E6B8417CB04EF87E151FE50D5390D98892F61EAD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E6B8417CB04EF87E151FE50D5390D98892F61EAD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>course_project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
