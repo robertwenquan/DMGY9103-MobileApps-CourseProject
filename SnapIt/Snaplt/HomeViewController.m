@@ -10,6 +10,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "DetailViewController.h"
+#import "StatisticsViewController.h"
 #import <ImageIO/ImageIO.h>
 
 #define colorwithrgb(x,y,z,alp) [UIColor colorWithRed:(x)/255.0 green:(y)/255.0 blue:(z)/255.0 alpha:(alp)]
@@ -138,6 +139,9 @@
 - (void)checkItemStats:(UIBarButtonItem *)item
 {
     NSLog(@"check item status");
+    
+    StatisticsViewController *statsVC = [[StatisticsViewController alloc] init];
+    [self.navigationController pushViewController:statsVC animated:YES];
 }
 
 

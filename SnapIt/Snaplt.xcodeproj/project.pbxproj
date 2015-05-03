@@ -43,6 +43,7 @@
 		491180741AEC2E4100A686A5 /* 07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491180701AEC2E4100A686A5 /* 07.jpg */; };
 		491180751AEC2E4100A686A5 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491180711AEC2E4100A686A5 /* 08.jpg */; };
 		4919C6481AE864C500F0FF7B /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4919C6471AE864C500F0FF7B /* 01.jpg */; };
+		492D07FC1AF6DC31008AB91F /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		491180701AEC2E4100A686A5 /* 07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 07.jpg; sourceTree = "<group>"; };
 		491180711AEC2E4100A686A5 /* 08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 08.jpg; sourceTree = "<group>"; };
 		4919C6471AE864C500F0FF7B /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
+		492D07FA1AF6DC31008AB91F /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		665D5D3A96631766C066A961 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E1EDC1BE6C79A4ADF194F7A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FFD9D4B7BEE6C22911DBB838 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +157,8 @@
 				18F8A84E1AE0BBC300B37EE5 /* AppDelegate.h */,
 				18F8A84F1AE0BBC300B37EE5 /* AppDelegate.m */,
 				18F8A8701AE0BBF100B37EE5 /* HomeViewController.h */,
+				492D07FA1AF6DC31008AB91F /* StatisticsViewController.h */,
+				492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */,
 				18F8A8711AE0BBF100B37EE5 /* HomeViewController.m */,
 				18729FBC1AE2AE9800DB4E73 /* DetailViewController.h */,
 				18729FBD1AE2AE9800DB4E73 /* DetailViewController.m */,
@@ -394,6 +399,7 @@
 				18F8A8501AE0BBC300B37EE5 /* AppDelegate.m in Sources */,
 				18F8A84D1AE0BBC300B37EE5 /* main.m in Sources */,
 				18F8A8721AE0BBF100B37EE5 /* HomeViewController.m in Sources */,
+				492D07FC1AF6DC31008AB91F /* StatisticsViewController.m in Sources */,
 				18729FBE1AE2AE9800DB4E73 /* DetailViewController.m in Sources */,
 				18729FC61AE2FAAB00DB4E73 /* TakeViewController.m in Sources */,
 			);
