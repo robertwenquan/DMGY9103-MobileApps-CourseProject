@@ -46,18 +46,15 @@
     _pickerVC.allowsEditing = NO;
     
     [self presentViewController:_pickerVC animated:YES completion:^{}];
-    
-    
+
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    
     if (picker.sourceType == UIImagePickerControllerSourceTypeCamera)
     {
         NSString* mediaType = [info objectForKey:UIImagePickerControllerMediaType];
-        
         
         if ([mediaType isEqualToString:(NSString *)kUTTypeImage])
         {
@@ -70,13 +67,10 @@
                 _imageView.transform = CGAffineTransformScale(picker.cameraViewTransform, -1, 1);
             }
             
-            
             UIImageWriteToSavedPhotosAlbum(originImage, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
         }
-        
     }
     [picker dismissViewControllerAnimated:YES completion:^{}];
-    
 }
 
 - (void)image:(UIImage*)image didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo

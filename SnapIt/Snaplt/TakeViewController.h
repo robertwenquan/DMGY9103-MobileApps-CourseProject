@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TakeViewController : UIViewController<UIImagePickerControllerDelegate>
+@interface TakeViewController : UIViewController <UIImagePickerControllerDelegate>
 {
     UIImagePickerController *_pickerVC;
     UIImageView *_imageView;
