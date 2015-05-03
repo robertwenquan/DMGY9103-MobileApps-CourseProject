@@ -26,12 +26,18 @@
     
     [super viewDidLoad];
     self.view.backgroundColor = colorwithrgb(0, 0, 87, 1.0);
-    self.title = @"PHOTO";
+    self.title = @"INSPIRATIONS";
     
     // Do any additional setup after loading the view.
     
+    UIImage *statsImg = [UIImage imageNamed:@"focal-lens.png"];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:statsImg landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(checkItemStats:)];
+    
+    [self.navigationItem setLeftBarButtonItem:leftItem];
+    
     //navigationbar right button
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next"
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next >"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(rightItemClicked:)];
@@ -39,7 +45,7 @@
     [self.navigationItem setRightBarButtonItem:rightItem animated:YES];
     
     //ImageView displaying photos
-    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.center.x-140, 50, 280, 280)];
+    _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 63, 320, 320)];
     _imageView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_imageView];
     
@@ -128,6 +134,12 @@
     DetailViewController *detailVC = [[DetailViewController alloc]init];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
+
+- (void)checkItemStats:(UIBarButtonItem *)item
+{
+    NSLog(@"check item status");
+}
+
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
