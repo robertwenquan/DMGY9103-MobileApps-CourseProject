@@ -44,6 +44,8 @@
 		491180751AEC2E4100A686A5 /* 08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 491180711AEC2E4100A686A5 /* 08.jpg */; };
 		4919C6481AE864C500F0FF7B /* 01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4919C6471AE864C500F0FF7B /* 01.jpg */; };
 		492D07FC1AF6DC31008AB91F /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */; };
+		49477B451AF7035600DE637A /* screen-stats.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49477B441AF7035600DE637A /* screen-stats.jpg */; };
+		49477B471AF7035F00DE637A /* screen_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 49477B461AF7035F00DE637A /* screen_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		4919C6471AE864C500F0FF7B /* 01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.jpg; sourceTree = "<group>"; };
 		492D07FA1AF6DC31008AB91F /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		49477B441AF7035600DE637A /* screen-stats.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-stats.jpg"; sourceTree = "<group>"; };
+		49477B461AF7035F00DE637A /* screen_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen_bg.png; sourceTree = "<group>"; };
 		665D5D3A96631766C066A961 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E1EDC1BE6C79A4ADF194F7A4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FFD9D4B7BEE6C22911DBB838 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +209,9 @@
 				18729FC21AE2BD9A00DB4E73 /* camera-snap.png */,
 				490C2E301AF18B0B00060397 /* aperture-50px.png */,
 				490C2E311AF18B0B00060397 /* exposure-bias-50px.png */,
+				49477B441AF7035600DE637A /* screen-stats.jpg */,
 				490C2E321AF18B0B00060397 /* focal-lens.png */,
+				49477B461AF7035F00DE637A /* screen_bg.png */,
 				490C2E331AF18B0B00060397 /* iso-speed-50px.png */,
 				490C2E341AF18B0B00060397 /* shutter-speed-50px.png */,
 				490C2E351AF18B0B00060397 /* white-balance.png */,
@@ -333,8 +339,10 @@
 				18F8A8751AE0BC7800B37EE5 /* screen-welcome.jpg in Resources */,
 				18F8A8581AE0BBC400B37EE5 /* Images.xcassets in Resources */,
 				491180721AEC2E4100A686A5 /* 05.jpg in Resources */,
+				49477B451AF7035600DE637A /* screen-stats.jpg in Resources */,
 				491180741AEC2E4100A686A5 /* 07.jpg in Resources */,
 				491180731AEC2E4100A686A5 /* 06.jpg in Resources */,
+				49477B471AF7035F00DE637A /* screen_bg.png in Resources */,
 				490C2E3B1AF18B0B00060397 /* white-balance.png in Resources */,
 				18F8A8851AE1607D00B37EE5 /* 01.jpg in Resources */,
 				18F8A8871AE1607D00B37EE5 /* 02.jpg in Resources */,
