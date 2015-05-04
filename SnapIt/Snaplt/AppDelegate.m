@@ -31,11 +31,14 @@
         HomeViewController *home = [[HomeViewController alloc]initWithNibName:nil bundle:nil];
         UINavigationController *rootCtr = [[UINavigationController alloc]initWithRootViewController:home];
         
-        rootCtr.navigationBar.barTintColor = [UIColor colorWithRed:0.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
+        // set navigation bar color to black
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f]];
         // NavigationBar title white
         [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
         // Back button color white
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        
+        [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
         
         self.window.rootViewController = rootCtr;
     }];

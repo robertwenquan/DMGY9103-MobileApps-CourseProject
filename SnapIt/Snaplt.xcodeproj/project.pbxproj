@@ -160,9 +160,9 @@
 			children = (
 				18F8A84E1AE0BBC300B37EE5 /* AppDelegate.h */,
 				18F8A84F1AE0BBC300B37EE5 /* AppDelegate.m */,
-				18F8A8701AE0BBF100B37EE5 /* HomeViewController.h */,
 				492D07FA1AF6DC31008AB91F /* StatisticsViewController.h */,
 				492D07FB1AF6DC31008AB91F /* StatisticsViewController.m */,
+				18F8A8701AE0BBF100B37EE5 /* HomeViewController.h */,
 				18F8A8711AE0BBF100B37EE5 /* HomeViewController.m */,
 				18729FBC1AE2AE9800DB4E73 /* DetailViewController.h */,
 				18729FBD1AE2AE9800DB4E73 /* DetailViewController.m */,
