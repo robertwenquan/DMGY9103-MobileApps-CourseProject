@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Snaplt
 //
-//  Created by apple on 15/4/16.
+//  Created by apple on 4/16/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
@@ -17,13 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // Setup the launch picture
     UIImageView *backImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.window.bounds.size.width, self.window.bounds.size.height)];
     backImg.image = [UIImage imageNamed:@"screen-welcome.jpg"];
     backImg.alpha = 0.0;
     [self.window addSubview:backImg];
+    
     [UIView animateWithDuration:3.0 animations:^{
         backImg.alpha = 1.0;
     }completion:^(BOOL finished) {
@@ -37,7 +39,7 @@
         [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
         // Back button color white
         [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-        
+        // make the status bar with light color on the dark background color
         [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
         
         self.window.rootViewController = rootCtr;

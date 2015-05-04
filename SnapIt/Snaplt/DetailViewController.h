@@ -2,7 +2,7 @@
 //  DetailViewController.h
 //  Snaplt
 //
-//  Created by apple on 15/4/18.
+//  Created by apple on 4/16/18.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 

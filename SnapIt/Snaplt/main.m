@@ -2,8 +2,8 @@
 //  main.m
 //  Snaplt
 //
-//  Created by apple on 15/4/16.
-//  Copyright (c) 2015年 apple. All rights reserved.
+//  Created by apple on 4/16/15.
+//  Copyright (c) 2015 apple. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

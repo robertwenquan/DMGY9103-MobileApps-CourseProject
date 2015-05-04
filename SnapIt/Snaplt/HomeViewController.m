@@ -2,7 +2,7 @@
 //  HomeViewController.m
 //  Snaplt
 //
-//  Created by apple on 15/4/16.
+//  Created by apple on 4/16/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
@@ -27,17 +27,14 @@
     
     [super viewDidLoad];
     self.view.backgroundColor = colorwithrgb(0, 0, 87, 1.0);
-    self.title = @"INSPIRATIONS";
+    self.title = @"Inspiration";
     
-    // Do any additional setup after loading the view.
-    
+    // left button on the navigation bar is to check the statistics of the pictures.
     UIImage *statsImg = [UIImage imageNamed:@"focal-lens.png"];
-    
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:statsImg landscapeImagePhone:nil style:UIBarButtonItemStylePlain target:self action:@selector(checkItemStats:)];
-    
     [self.navigationItem setLeftBarButtonItem:leftItem];
     
-    //navigationbar right button
+    //navigationbar right button is to go to the detailed view of the pictures with EXIF data
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"Next >"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
@@ -51,7 +48,6 @@
     [self.view addSubview:_imageView];
     
     [self takePhoto];
-    
 }
 
 - (void)likeBtnClicked{
@@ -119,7 +115,7 @@
         return;
     }
     
-    _pickerVC = [[UIImagePickerController alloc]init];
+    _pickerVC = [[UIImagePickerController alloc] init];
     _pickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
     _pickerVC.mediaTypes = [NSArray arrayWithObject:(NSString*)kUTTypeImage];
     _pickerVC.delegate = self;

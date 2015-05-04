@@ -2,7 +2,7 @@
 //  TakeViewController.m
 //  Snaplt
 //
-//  Created by apple on 15/4/18.
+//  Created by apple on 4/18/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
@@ -88,7 +88,6 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:^{}];
-    
 }
 
 - (void)didReceiveMemoryWarning {
