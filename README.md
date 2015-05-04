@@ -1,5 +1,5 @@
-# DMGY9103 MobileApps Course Project
-##### DMGY9103 iOS Programming Course Project
+# DMGY9103 iOS MobileApps Course Project
+##### Robert Wen (robert.wen@nyu.edu)
 
 ### Basic Goals
 * App can take a picture and save it
