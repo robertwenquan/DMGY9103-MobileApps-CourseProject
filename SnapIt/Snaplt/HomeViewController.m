@@ -58,7 +58,6 @@
     if (_num == 1) {
         UIImage *tempImg = [UIImage imageNamed:@"01.jpg"];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -149,7 +148,6 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    
     //Like Button
     UIButton *likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     likeBtn.frame = CGRectMake(self.view.center.x-30, _imageView.frame.origin.y+_imageView.frame.size.height+5, 60, 20);
@@ -230,7 +228,6 @@
     [picker dismissViewControllerAnimated:YES completion:^{}];
     
 }
-
 
 
 /*

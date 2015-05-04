@@ -26,20 +26,21 @@
     self.view.backgroundColor = colorwithrgb(0, 0, 87, 1.0);
     self.title =@"Photo Info";
     
-    // Navigation bar
+    // Left Navigation bar button
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
                                    initWithTitle: @"Back"
                                    style: UIBarButtonItemStylePlain
-                                   target: nil action: nil];
+                                   target: self action: nil];
     
     [self.navigationItem setBackBarButtonItem: backButton];
     
+    // Eight Navigation bar button
     UIBarButtonItem *nextButton = [[UIBarButtonItem alloc]
                                    initWithTitle: @"Next"
                                    style: UIBarButtonItemStylePlain
                                    target: self action: @selector(nextVC)];
     
-    [self.navigationItem setRightBarButtonItem: nextButton];
+    [self.navigationItem setRightBarButtonItem : nextButton];
 
     // Create a paged scroll view controller here to show four pictures
     
