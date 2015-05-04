@@ -21,6 +21,10 @@
     [super viewDidLoad];
     
     NSLog(@"initializing statistial view controller!!!");
+    
+    UIImageView *photo1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 35, 320, 500)];
+    photo1.image = [UIImage imageNamed:@"screen-stats.jpg"];
+    [self.view addSubview:photo1];
 }
 
 @end
