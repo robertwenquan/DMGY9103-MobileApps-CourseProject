@@ -11,9 +11,35 @@
 
 @implementation ClarifaiApi
 
+- (void)tryClarifai
+{
+    static NSString * const client_id = @"dXLMALL9BbbbtXOtoMuIjHePimOEhYa_LxNsDOKI";
+    static NSString * const client_secret = @"inTXs1RJjhQ-ESqwlko3ve4mfNacGq3SfnTmnb5I";
+    
+    NSString * clarifai_auth_url = [NSString stringWithFormat:@"https://%@:%@@api.clarifai.com/v1/token/", client_id, client_secret];
+    NSString * clarifai_auth_post = @"grant_type=client_credentials";
+    
+    NSLog(@"AUTH: %@", clarifai_auth_url);
+    NSLog(@"POST: %@", clarifai_auth_post);
+    
+    // AUTH
+    // curl -X POST -d "grant_type=client_credentials" https://<client_id>:<client_secret>@api.clarifai.com/v1/token/
+    
+    /* response 
+     {
+     'access_token': 'U5j3rECLLZ86pWRjK35g489QJ4zrQI',
+     'expires_in': 36000,
+     'scope': 'api_access',
+     'token_type': 'Bearer'
+     }
+     */
+    
+}
+
 - (void)tryAFNetworking
 {
     NSLog(@"Try AFNetworking library...");
+    
     static NSString * const BaseURLString = @"http://www.raywenderlich.com/demos/weather_sample/";
     
     NSString *string = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
@@ -30,8 +56,6 @@
         
         NSLog(@"%@", abc);
         
-        
-        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         // 4
@@ -45,6 +69,8 @@
     
     // 5
     [operation start];
+    
+    [self tryClarifai];
 }
 
 @end
